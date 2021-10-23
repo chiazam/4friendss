@@ -1,0 +1,13 @@
+:root{
+    /* navy mode */
+    /* ....... */
+    --border-color_darker: rgb(28 44 68);
+    --blacker-light: white;
+    --liter-black-moder: rgb(40 40 51);
+    --darker-black-moder: rgb(22 22 37);
+    --color-theme: white;
+    --darker-scroll-moder: rgb(30 35 45);
+    --overlay_wakak: 73, 73, 80;
+    --blog-background: rgb(49 49 118);
+    /* ....... */
+}

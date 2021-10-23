@@ -1,0 +1,13 @@
+:root{
+    /* lite mode */
+    /* ....... */
+    --border-color_darker: rgb(224, 224, 224);
+    --blacker-light: black;
+    --liter-black-moder: white;
+    --darker-black-moder: white;
+    --color-theme: black;
+    --darker-scroll-moder: rgb(243, 243, 243);
+    --overlay_wakak: 250, 250, 250;
+    --blog-background: whitesmoke;
+    /* ....... */
+}

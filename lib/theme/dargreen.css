@@ -1,0 +1,13 @@
+:root {
+    /* dagreen mode */
+    /* ....... */
+    --border-color_darker: rgb(90 91 90);
+    --blacker-light: white;
+    --liter-black-moder: rgb(63 66 64);
+    --darker-black-moder: rgb(53 60 58);
+    --color-theme: #ffffff;
+    --darker-scroll-moder: rgb(53 62 53);
+    --overlay_wakak: 15, 36, 40;
+    --blog-background: rgb(68 76 74);
+    /* ....... */
+}

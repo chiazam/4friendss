@@ -1,0 +1,161 @@
+body{
+    background: var(--darker-black-moder);
+    color: var(--color-theme);
+    font-size: 15px;
+
+}
+button{
+    color:var(--color-theme);
+}
+.friends-h3{
+    font-size: 20px;
+    padding: 2px;
+
+}
+.card{
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(var(--overlay_wakak), .5);
+
+}
+
+/*.hang-over-white-block{
+    display: flex;
+}*/
+
+.hang-over-white-block>section{
+    background: var(--darker-black-moder);
+    overflow: hidden;
+}
+
+hang-over-white-block{
+    background: var(--liter-black-moder);
+}
+
+.stable-platformers{
+    border-radius: 5px;
+    max-width: 400px;
+    background-image: var(--background-url);
+    height: fit-content;
+    /*box-shadow: var(--box-shadow);*/
+}
+
+.loggers-lock-inputs{
+    padding: 10px 1%;
+    width: 98%;
+    border: none;
+    background: transparent;
+
+}
+
+.loggers-lock-symbol-holders{
+    padding: 0px 5px;
+    cursor: pointer;
+}
+
+.loggers-lock-inputs-holders{
+    flex:1; 
+
+}
+
+.loggers-lock-inputs-holders-holders{
+
+    margin-bottom: 5px;
+    background: var(--liter-black-moder);
+    /*border-radius: 5px;*/
+
+}
+
+
+.beticey-logout-template{
+
+    padding: 5px;
+
+}
+
+.error-box{padding: 10px;}
+
+.awareness-hinter-dope{
+    padding: 10px;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.solemma-push{
+    margin:10px;
+    height: 0px;
+}
+
+
+.padding-left-30-px {
+    padding-left: 28px;
+}
+
+.padding-left-50-px {
+    padding-left: 48px;
+}
+
+.padding-left-40-px {
+    padding-left: 38px;
+}
+
+.container{ 
+    max-width: 1000px;
+    margin: auto;
+}
+
+.content-post-editor-smart-weep{
+
+    line-height: 29px;
+    max-height: 400px;
+    min-height:35px;
+
+}
+
+.liner-post-attach{
+
+    margin-left: 5px;
+
+}
+
+.__header__header_below_reloader_show {
+    height: 5px !important;
+    max-height: 5px !important;
+    background-image: var(--upload-gradient);
+    height: fit-content;
+}
+
+.post-button{
+    min-width: 100px;
+    opacity: .3;
+}
+
+.width-height-20px {
+    width: 20px;
+    height: 20px;
+}
+
+.opacity-8{
+    opacity: .8;
+}
+
+.width-90-cent{
+    width: 90%;
+}
+
+.max-width-450-px{
+    max-width: 450px;
+}
+
+.max-width-460-px{
+    max-width: 460px;
+}
+
+
+.max-width-470-px{
+    max-width: 470px;
+}
+

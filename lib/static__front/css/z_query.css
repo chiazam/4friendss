@@ -1,0 +1,83 @@
+body{
+
+    font-size: 14px;
+
+}
+.margin-bottom-right-5-px{
+    margin-right:5px;
+}
+.flex-column-row{
+    flex-direction: row;
+}
+
+.max-width-400-500-px{
+    max-width: 400px;
+}
+.max-width-400-600-px{
+    max-width: 600px;
+}
+
+.justify-align-content-items-center{
+    justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .mini-justify-center{
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    body{
+
+        font-size: 12px;
+
+    }
+
+    .menu-no-stable{
+        display:none;
+    }
+
+    .flex-column-row{
+        flex-direction: column;
+    }
+
+    .margin-bottom-right-5-px{
+        margin-bottom:5px;
+        margin-right: 0px;
+    }
+
+    .max-width-400-500-px{
+        max-width: 500px;
+    }
+
+    .max-width-400-600-px{
+        max-width: 400px;
+    }
+
+    .justify-align-content-items-center{
+        justify-content: unset;
+        align-items: center;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .justify-align-content-items-center{
+        justify-content: unset;
+        align-items: unset;
+    }
+
+    body{
+
+        font-size: 10px;
+
+    }
+
+}
+
+/*sv93.ifastnet.com*/

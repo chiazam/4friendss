@@ -1,0 +1,13 @@
+:root {  
+    /* wine mode */
+    /* ....... */
+    --border-color_darker: rgb(115 50 50);
+    --blacker-light: white;
+    --liter-black-moder: rgb(103 52 52);
+    --darker-black-moder: rgb(93 36 36);
+    --color-theme: white;
+    --darker-scroll-moder: rgb(109 61 61);
+    --overlay_wakak: 151, 115, 107;
+    --blog-background: rgb(133 56 56);
+    /* ....... */
+}
