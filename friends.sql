@@ -41,9 +41,9 @@ CREATE TABLE IF NOT EXISTS `audio__info` (
   `artist` longtext NOT NULL,
   `duration_secs` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.audio__info: 6 rows
+-- Dumping data for table friends.audio__info: 17 rows
 /*!40000 ALTER TABLE `audio__info` DISABLE KEYS */;
 INSERT INTO `audio__info` (`id`, `path`, `hash`, `name`, `size_mb`, `duration`, `year`, `title`, `album`, `track_number`, `band`, `composer`, `artist`, `duration_secs`) VALUES
 	(1, 'files/audio_music/3b433885b1493620980843dc45b306d7.mp3', '32be4a2b30aee43096025a33a6f1503c', 'Best_of_Sia Mixtape-www.ForeignDjMixtapes.com', '93.431578', '1:37:18', '2019', 'Best of Sia Mixtape-www.ForeignDjMixtapes.com.mp3', 'www.ForeignDjMixtapes.com', 'unknown', 'www.ForeignDjMixtapes.com', 'www.ForeignDjMixtapes.com', 'www.ForeignDjMixtapes.com', '5837.5575135669'),
@@ -51,7 +51,18 @@ INSERT INTO `audio__info` (`id`, `path`, `hash`, `name`, `size_mb`, `duration`, 
 	(3, 'files/audio_music/60b473ab14b9d1e3761061ddf8eba3e5.mp3', '68bca12f60c945b101fbc42619eed0f8', 'Dj Baddo Best Of Lilkesh Mix', '57.248256', '59:18', 'unknown', 'Dj Baddo Best Of Lilkesh Mix || Follow @Djbaddo On Instagram', 'unknown', 'unknown', '@Djbaddo @Baddoentworld', 'Baddo Ent World', 'unknown', '3557.9298560579'),
 	(4, 'files/audio_music/98aa8e25baf8243149fb4727e5e64f09.mp3', '81a0d1bab69c0feaae4bd7b2c6521c37', '2pac - It ain t easy', '11.778671', '4:54', '2009', '2pac - It ain\'t easy', '2pac - It ain\'t easy', 'unknown', 'unknown', 'unknown', 'unknown', '294.18'),
 	(5, 'files/audio_music/6f189433a8f546ae3d0d55f5462a9817.mp3', '45ddd635871f5fe7ad9f7bba4899b793', 'Best_of_Nas_Mixtape-www.ForeignDjMixtapes.com', '71.512127', '1:13:35', '2020', 'Best of Nas Mixtape-www.ForeignDjMixtapes.com.mp3', 'www.ForeignDjMixtapes.com', 'unknown', 'www.ForeignDjMixtapes.com', 'www.ForeignDjMixtapes.com', 'www.ForeignDjMixtapes.com', '4415.1117921076'),
-	(6, 'files/audio_music/15461bea81300c383664379ddc505326.mp3', '8fea74d88440daaf9b05592ba8300911', 'DJ_Flozy__ Best Of Flavour Mixtape-www.NaijaDJMixtapes.com', '39.638809', '1:22:32', '2020', 'DJ Flozy â€“ Best Of Flavour Mixtape-www.NaijaDJMixtapes.com.mp3', 'IG @NaijaDJMixtapes', 'unknown', 'www.NaijaDJMixtapes.com', 'www.NaijaDJMixtapes.com', 'www.NaijaDJMixtapes.com', '4951.635125');
+	(6, 'files/audio_music/15461bea81300c383664379ddc505326.mp3', '8fea74d88440daaf9b05592ba8300911', 'DJ_Flozy__ Best Of Flavour Mixtape-www.NaijaDJMixtapes.com', '39.638809', '1:22:32', '2020', 'DJ Flozy â€“ Best Of Flavour Mixtape-www.NaijaDJMixtapes.com.mp3', 'IG @NaijaDJMixtapes', 'unknown', 'www.NaijaDJMixtapes.com', 'www.NaijaDJMixtapes.com', 'www.NaijaDJMixtapes.com', '4951.635125'),
+	(7, 'files/audio_music/96b4e81acb604da5a7810a36de242866.mp3', '928cdd1cc2dc70b59f032177a0b1fdf3', 'Lil-Kesh-â€“-Undertaker', '3.569915', '3:40', '2019', 'Undertaker | Naijaloaded.com.ng', 'IG:- @naijaloadedcomng', 'unknown', 'Naijaloaded.com.ng', 'Naijaloaded.com.ng', 'Lil Kesh', '219.6113125'),
+	(8, 'files/audio_music/916cc6086405cd34989c60d98060d250.mp3', '9e8c7639d29878aa03e2e687cbbbb9bc', 'Danagog-Koba-ft.-Lil-Kesh-_-tooXclusive.com_', '6.012685', '3:45', 'unknown', 'Koba ft. Lil Kesh | tooXclusive.com', '@tooxclusive_com', 'unknown', 'tooXclusive.com', 'unknown', 'Danagog', '224.86204166667'),
+	(9, 'files/audio_music/fd33235ea9bfcdd5f5564862b8e92762.mp3', '05094db99f663d953b88fde685decb74', 'Lil_Kesh_-_For_You_(MPmania.com)', '8.947185', '3:41', '2016', 'For You | www.MPmania.com', 'MPmania.com', 'unknown', 'unknown', 'unknown', 'Lil Kesh', '221.204875'),
+	(10, 'files/audio_music/8f2838ad4518d2a75c0e1b65f133bfb6.mp3', '767fa9d26db94195b8a7ecdaa8ac50a2', 'Lil Kesh Ft. Adekunle Gold - Life Of A Star', '2.769595', '3:26', '2016', 'Life Of A Star', 'Howwe Entertainment', 'unknown', 'Howwe Music', 'Howwe Music', 'Lil Kesh Ft. Adekunle Gold', '205.77601220435'),
+	(11, 'files/audio_music/b2a5ad23578d312af684e47639c7e369.mp3', 'cc68adaf03912171cfbdde26d2136715', 'Lil-Kesh-Yaya-Yoyo-feat.-DaVido', '3.903385', '4:00', '20160318', 'Yaya Oyoyo', 'YAGI', 'unknown', 'Lil Kesh', 'Lil Kesh, Davido', 'Lil Kesh (feat. DaVido)', '240.01306150333'),
+	(12, 'files/audio_music/d4ed2216041774b1334db2a05140269e.mp3', 'f3bec1b865779dc2e9e0f99a4343eff6', 'Lil_Kesh_Ishe_9jaflaver.com_', '4.754353', '3:57', '2016', 'Ishe Via:- 9jaflaver.com', 'Twitter:- @9jaflaver', '1', 'unknown', 'unknown', 'Lil Kesh', '236.617125'),
+	(13, 'files/audio_music/1cb033a85f5d8aee62bfb3895c645bfc.mp3', 'e0f55dc6b810567318521567c52e1bbc', 'Chinko_Ekun_-_Able_God_ft_Lil_Kesh_Zlatan-tooXclusive_', '4.774307', '4:27', '2019', 'Able God ft. Lil Kesh & Zlatan', '@tooXclusive_com', 'unknown', 'unknown', 'unknown', 'Chinko Ekun', '266.919125'),
+	(14, 'files/audio_music/e1373127e5ce3ee8e8e0a6a2866292b7.mp3', 'db7c2e1c50387fb1a7e2a63734e46f49', 'Lil Kesh - No Fake Love', '3.516013', '3:32', '2017', 'No Fake Love | Naijaloaded.com.ng', 'Twitter :- @NL_Official', 'unknown', 'Naijaloaded.com.ng', 'unknown', 'Lil Kesh', '212.3755625'),
+	(15, 'files/audio_music/b387361be346d48bf88d778accfe35b9.mp3', 'aca98beec63bbdd93fd5522f8093fcbd', 'Lil-Keshâ€“Shele-gan-gan-Prod-by-Krizbeatz', '3.599063', '3:41', 'unknown', 'unknown', 'tooxclusive.com', 'unknown', 'unknown', 'tooXclusive.com', 'unknown', '220.5256875'),
+	(16, 'files/audio_music/a95441c68f2e68d883da18d33420d854.mp3', 'f151ac73cd72c26a8f04c83dbe64ff5d', 'Lil_Kesh_Semilore_9jaflaver.com_', '4.018928', '3:36', '2016', 'Semilore Via:- 9jaflaver.com', 'Twitter:- @9jaflaver', '1', 'unknown', 'unknown', 'Lil Kesh', '216.05875'),
+	(17, 'files/audio_music/0749f7556ce2990d3096dbcbad3371ac.mp3', '2e17047d8113e8e4e3c1c3fe6bddc0d1', '2 Pac - 2Pac - Unconditional love', '5.226562', '5:26', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', 'unknown', '326.396125');
 /*!40000 ALTER TABLE `audio__info` ENABLE KEYS */;
 
 -- Dumping structure for table friends.chatings
@@ -65,15 +76,17 @@ CREATE TABLE IF NOT EXISTS `chatings` (
   `device` longtext,
   `sent` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.chatings: 5 rows
+-- Dumping data for table friends.chatings: 7 rows
 /*!40000 ALTER TABLE `chatings` DISABLE KEYS */;
 INSERT INTO `chatings` (`id`, `q_sender`, `b_sender`, `word`, `chat_key`, `date`, `device`, `sent`) VALUES
 	(3, '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', 'V2tSS1IwMTNQVDA9', 'dee666adc3f799e89f3471167a93ec18', '2021-09-14 23:15:33', 'computer', 1),
 	(5, '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', 'VjJwT1MySkdiRmxWVjJSclVqSm9NbE5WWkV0bFYwbDVUMFF3UFE9PQ==', 'cd0377af9540f92e3907ee2243e9b9be', '2021-09-14 23:30:21', 'computer', 1),
-	(6, '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', NULL, '7c1c9b4180643a11997eb52d772d9959', NULL, NULL, 0),
-	(16, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', NULL, '647d5f78b9242e6a9281f7da58133c00', NULL, NULL, 0),
+	(6, '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', 'V1ZWa1YwNVZiRWhoU0ZwclpWVktiMWt5TVZaYU1sWllUMVJHU2xJeFNqSlpWbU14WW14Q05rOUVNRDA9', '7c1c9b4180643a11997eb52d772d9959', '2021-10-11 18:05:28', 'computer', 1),
+	(16, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', 'V1ZWa2Nsb3hiSFZUYmxwcFpESTVUQT09', '647d5f78b9242e6a9281f7da58133c00', '2021-10-11 18:04:54', 'computer', 1),
+	(17, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', NULL, 'f724f435507d4c87e3f069d101d27b3e', NULL, NULL, 0),
+	(18, '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', NULL, '5e6ab7f1311cc1327327ab2a903551fd', NULL, NULL, 0),
 	(15, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', 'VTFSS1lXUnRTWGxXUlU1MlVsVktlRmxxVGs5aU1IUklWRzVhYVZVeWVIVlpiR1JIWTBkS1RsTXlaRXBOTURWdlYydEZPVkJSUFQwPQ==', '8f15cb4558efd16fc50fad619f879e76', '2021-09-27 06:44:52', 'computer', 1);
 /*!40000 ALTER TABLE `chatings` ENABLE KEYS */;
 
@@ -104,16 +117,18 @@ CREATE TABLE IF NOT EXISTS `chat_recievers` (
   `b_reciever` longtext NOT NULL,
   `chat_key` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.chat_recievers: 5 rows
+-- Dumping data for table friends.chat_recievers: 7 rows
 /*!40000 ALTER TABLE `chat_recievers` DISABLE KEYS */;
 INSERT INTO `chat_recievers` (`id`, `q_reciever`, `b_reciever`, `chat_key`) VALUES
+	(17, '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', 'f724f435507d4c87e3f069d101d27b3e'),
 	(15, '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '8f15cb4558efd16fc50fad619f879e76'),
 	(3, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', 'dee666adc3f799e89f3471167a93ec18'),
 	(16, '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '647d5f78b9242e6a9281f7da58133c00'),
 	(5, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', 'cd0377af9540f92e3907ee2243e9b9be'),
-	(6, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '7c1c9b4180643a11997eb52d772d9959');
+	(6, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '7c1c9b4180643a11997eb52d772d9959'),
+	(18, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '5e6ab7f1311cc1327327ab2a903551fd');
 /*!40000 ALTER TABLE `chat_recievers` ENABLE KEYS */;
 
 -- Dumping structure for table friends.chat_seen
@@ -128,8 +143,8 @@ CREATE TABLE IF NOT EXISTS `chat_seen` (
 -- Dumping data for table friends.chat_seen: 2 rows
 /*!40000 ALTER TABLE `chat_seen` DISABLE KEYS */;
 INSERT INTO `chat_seen` (`seer_q`, `seer_b`, `seen_q`, `seen_b`, `date`) VALUES
-	('62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-10-08 05:42:43'),
-	('3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-06 04:13:50');
+	('62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-10-18 18:46:56'),
+	('3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-11 18:54:45');
 /*!40000 ALTER TABLE `chat_seen` ENABLE KEYS */;
 
 -- Dumping structure for table friends.comment_post
@@ -143,9 +158,9 @@ CREATE TABLE IF NOT EXISTS `comment_post` (
   `device` longtext,
   `key_main` longtext,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.comment_post: 9 rows
+-- Dumping data for table friends.comment_post: 10 rows
 /*!40000 ALTER TABLE `comment_post` DISABLE KEYS */;
 INSERT INTO `comment_post` (`id`, `commenter_b`, `commenter_g`, `date`, `comment_word`, `key_link`, `device`, `key_main`) VALUES
 	(1, 'a27119e13be90d9867b96e03ad6259de', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2021-09-06 07:02:46', 'ðŸ™„ðŸ™„ðŸ™„', '0bfda1cbe39a846936804ac1cd9be7e3', 'computer', '1f73ac1bc5952b261e76b1a6ac188c01'),
@@ -156,7 +171,8 @@ INSERT INTO `comment_post` (`id`, `commenter_b`, `commenter_g`, `date`, `comment
 	(7, 'a27119e13be90d9867b96e03ad6259de', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2021-09-15 22:33:53', '@josh(com)gmail', 'eff907722e30f97b7ae3128eb4858421', 'computer', '774bad2e5d4e7076ffbf3aee8b8f6034'),
 	(8, 'a27119e13be90d9867b96e03ad6259de', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2021-09-27 15:32:23', 'Hi @josh(com)gmailÂ #loveyourstyle', 'a2c0751e098f02ee23058bbdf951b91c', 'computer', '551903541ab254752a4b25ff7cedf62b'),
 	(9, 'a27119e13be90d9867b96e03ad6259de', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2021-09-27 15:33:36', '#loveÂ #foodÂ #whoÂ #if', '106bbca401fc25c1343dc40a01dc3d38', 'computer', '147ed2b5f7b7a4339345ecb980295be2'),
-	(10, 'a27119e13be90d9867b96e03ad6259de', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2021-09-30 21:07:58', 'Hell', '34c172568af73be767be938a05832cef', 'computer', '07788a4c7891073c6841030351d49094');
+	(10, 'a27119e13be90d9867b96e03ad6259de', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2021-09-30 21:07:58', 'Hell', '34c172568af73be767be938a05832cef', 'computer', '07788a4c7891073c6841030351d49094'),
+	(11, 'a27119e13be90d9867b96e03ad6259de', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2021-10-15 08:27:16', '@josh(com)gmailÂ @emma(com)gmailÂ #loveÂ #peace', '106bbca401fc25c1343dc40a01dc3d38', 'Android', 'dfa4c591a1813d23e3d44d14ba1c501a');
 /*!40000 ALTER TABLE `comment_post` ENABLE KEYS */;
 
 -- Dumping structure for table friends.contact
@@ -254,9 +270,9 @@ CREATE TABLE IF NOT EXISTS `img_back_grond` (
   `color` longtext NOT NULL,
   `category` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.img_back_grond: ~32 rows (approximately)
+-- Dumping data for table friends.img_back_grond: ~49 rows (approximately)
 /*!40000 ALTER TABLE `img_back_grond` DISABLE KEYS */;
 INSERT INTO `img_back_grond` (`id`, `hash`, `color`, `category`) VALUES
 	(1, '37c7c501f28a7f5f266d335a1c56a779', '#606060', 'post_times_blog'),
@@ -297,7 +313,18 @@ INSERT INTO `img_back_grond` (`id`, `hash`, `color`, `category`) VALUES
 	(45, 'd3f1eb889b00661a3d5cc77300b1c12f', '#202020', 'post_times_blog'),
 	(46, 'a5902aea94fe8ba8fef4b7488de1646d', '#201010', 'post_times_blog'),
 	(51, 'ed26971b925c8c6a6d0c80481a8d7a5c', '#202020', 'cover'),
-	(52, 'ed26971b925c8c6a6d0c80481a8d7a5c', '#a08080', 'prof_pix');
+	(52, 'ed26971b925c8c6a6d0c80481a8d7a5c', '#a08080', 'prof_pix'),
+	(53, '928cdd1cc2dc70b59f032177a0b1fdf3', '#20b030', 'music'),
+	(54, '9e8c7639d29878aa03e2e687cbbbb9bc', '#d0d0d0', 'music'),
+	(55, '05094db99f663d953b88fde685decb74', '#f0f0f0', 'music'),
+	(56, '767fa9d26db94195b8a7ecdaa8ac50a2', '#401060', 'music'),
+	(57, 'cc68adaf03912171cfbdde26d2136715', '#202020', 'music'),
+	(58, 'f3bec1b865779dc2e9e0f99a4343eff6', '#ffffff', 'music'),
+	(59, 'e0f55dc6b810567318521567c52e1bbc', '#ffffff', 'music'),
+	(60, 'db7c2e1c50387fb1a7e2a63734e46f49', '#f0c050', 'music'),
+	(61, 'aca98beec63bbdd93fd5522f8093fcbd', '#101010', 'music'),
+	(62, 'f151ac73cd72c26a8f04c83dbe64ff5d', '#ffffff', 'music'),
+	(63, '2e17047d8113e8e4e3c1c3fe6bddc0d1', '#000000', 'music');
 /*!40000 ALTER TABLE `img_back_grond` ENABLE KEYS */;
 
 -- Dumping structure for table friends.logins
@@ -310,9 +337,9 @@ CREATE TABLE IF NOT EXISTS `logins` (
   `time` datetime NOT NULL,
   `device` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=597 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=728 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.logins: 591 rows
+-- Dumping data for table friends.logins: 727 rows
 /*!40000 ALTER TABLE `logins` DISABLE KEYS */;
 INSERT INTO `logins` (`id`, `r`, `g`, `b`, `q`, `time`, `device`) VALUES
 	(1, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-09-06 00:13:32', 'computer'),
@@ -910,7 +937,138 @@ INSERT INTO `logins` (`id`, `r`, `g`, `b`, `q`, `time`, `device`) VALUES
 	(593, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 05:43:23', 'computer'),
 	(594, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 06:04:44', 'computer'),
 	(595, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 06:08:03', 'computer'),
-	(596, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 06:08:56', 'Android');
+	(596, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 06:08:56', 'Android'),
+	(597, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 16:52:29', 'computer'),
+	(598, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 17:33:25', 'computer'),
+	(599, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 18:01:40', 'computer'),
+	(600, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 18:02:05', 'computer'),
+	(601, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 19:19:15', 'computer'),
+	(602, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 19:22:50', 'computer'),
+	(603, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 19:26:52', 'computer'),
+	(604, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 19:27:47', 'computer'),
+	(605, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 23:39:20', 'computer'),
+	(606, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 23:39:33', 'computer'),
+	(607, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-08 23:40:00', 'computer'),
+	(608, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-09 00:58:44', 'computer'),
+	(609, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-09 01:23:02', 'computer'),
+	(610, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-10 03:12:01', 'computer'),
+	(611, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 00:34:21', 'computer'),
+	(612, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 00:57:19', 'computer'),
+	(613, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 03:21:51', 'computer'),
+	(614, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 06:01:52', 'computer'),
+	(615, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 06:07:52', 'computer'),
+	(616, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 06:57:09', 'computer'),
+	(617, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 07:05:30', 'computer'),
+	(618, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 07:50:49', 'Android'),
+	(619, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 07:54:15', 'computer'),
+	(620, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 08:08:26', 'Android'),
+	(621, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 08:08:34', 'computer'),
+	(622, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 08:09:18', 'Android'),
+	(623, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 08:10:56', 'computer'),
+	(624, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 08:12:01', 'Android'),
+	(625, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 08:15:26', 'computer'),
+	(626, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 17:50:58', 'computer'),
+	(627, 'ae1deb40d2480b4afeff58cd175439fd', '4c96ecac7236f324c384463ba5a62a65', '97d14b1c9f695e960fd7ccbb8ac725dd', '3d664bd5b38f53c2ef3e437d2f9df6c3', '2021-10-11 17:59:55', 'computer'),
+	(628, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 18:21:19', 'computer'),
+	(629, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 18:21:58', 'computer'),
+	(630, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 18:22:38', 'computer'),
+	(631, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 18:31:16', 'Android'),
+	(632, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 18:32:58', 'Android'),
+	(633, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 18:36:25', 'Android'),
+	(634, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 18:39:03', 'computer'),
+	(635, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 18:50:44', 'computer'),
+	(636, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 18:52:10', 'computer'),
+	(637, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 18:52:41', 'computer'),
+	(638, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-11 18:56:16', 'computer'),
+	(639, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-12 07:16:30', 'computer'),
+	(640, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-12 07:38:12', 'computer'),
+	(641, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-13 19:25:03', 'computer'),
+	(642, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-13 20:12:06', 'computer'),
+	(643, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-13 20:15:51', 'computer'),
+	(644, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-13 20:17:37', 'computer'),
+	(645, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-13 21:10:17', 'computer'),
+	(646, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-13 21:48:31', 'computer'),
+	(647, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-13 21:48:41', 'computer'),
+	(648, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-13 22:13:41', 'computer'),
+	(649, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-13 22:18:29', 'computer'),
+	(650, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-13 22:22:20', 'computer'),
+	(651, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-13 22:22:35', 'computer'),
+	(652, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-14 16:24:54', 'computer'),
+	(653, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-14 16:25:33', 'computer'),
+	(654, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-14 17:14:58', 'computer'),
+	(655, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-14 17:28:58', 'computer'),
+	(656, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-15 06:57:12', 'computer'),
+	(657, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-15 07:09:23', 'computer'),
+	(658, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-15 08:08:28', 'Android'),
+	(659, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-15 08:13:32', 'computer'),
+	(660, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-15 08:43:43', 'computer'),
+	(661, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-15 13:19:29', 'computer'),
+	(662, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-15 13:19:30', 'computer'),
+	(663, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-15 13:19:36', 'computer'),
+	(664, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-15 14:17:42', 'computer'),
+	(665, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-15 15:18:53', 'computer'),
+	(666, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-16 12:03:44', 'computer'),
+	(667, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-16 12:12:58', 'computer'),
+	(668, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-16 17:23:11', 'computer'),
+	(669, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 02:12:34', 'computer'),
+	(670, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 02:17:35', 'computer'),
+	(671, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 03:38:10', 'computer'),
+	(672, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 04:10:15', 'computer'),
+	(673, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 04:10:37', 'computer'),
+	(674, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 04:42:06', 'Android'),
+	(675, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 04:56:14', 'Android'),
+	(676, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 04:56:52', 'computer'),
+	(677, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 04:57:25', 'Android'),
+	(678, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 05:20:16', 'computer'),
+	(679, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 09:39:12', 'computer'),
+	(680, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 09:48:31', 'computer'),
+	(681, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 09:52:07', 'computer'),
+	(682, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 10:52:21', 'computer'),
+	(683, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 10:58:29', 'computer'),
+	(684, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 11:03:08', 'computer'),
+	(685, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 11:03:23', 'computer'),
+	(686, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 11:03:56', 'computer'),
+	(687, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 16:20:11', 'computer'),
+	(688, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 16:22:03', 'computer'),
+	(689, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 16:22:20', 'computer'),
+	(690, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 18:10:14', 'computer'),
+	(691, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-17 18:18:44', 'computer'),
+	(692, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-18 13:47:35', 'computer'),
+	(693, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-18 14:00:38', 'computer'),
+	(694, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-18 17:37:43', 'computer'),
+	(695, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-18 17:37:51', 'computer'),
+	(696, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-18 18:40:29', 'computer'),
+	(697, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-18 19:04:52', 'computer'),
+	(698, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-18 20:03:06', 'computer'),
+	(699, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-18 22:26:34', 'computer'),
+	(700, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-18 22:43:52', 'computer'),
+	(701, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-19 00:22:26', 'computer'),
+	(702, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-19 00:25:00', 'computer'),
+	(703, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-19 10:32:32', 'computer'),
+	(704, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-19 11:26:13', 'computer'),
+	(705, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-19 18:31:03', 'computer'),
+	(706, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-19 18:33:39', 'computer'),
+	(707, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-19 19:33:46', 'computer'),
+	(708, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-19 19:38:09', 'computer'),
+	(709, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-19 20:52:18', 'computer'),
+	(710, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-19 23:15:30', 'computer'),
+	(711, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-19 23:25:50', 'computer'),
+	(712, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-20 00:38:26', 'computer'),
+	(713, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-20 02:37:59', 'computer'),
+	(714, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-20 03:09:22', 'computer'),
+	(715, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-20 03:18:49', 'Android'),
+	(716, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-21 12:35:54', 'computer'),
+	(717, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-21 12:36:18', 'computer'),
+	(718, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-21 12:59:52', 'computer'),
+	(719, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-21 13:00:18', 'computer'),
+	(720, 'ae1deb40d2480b4afeff58cd175439fd', '4c96ecac7236f324c384463ba5a62a65', '97d14b1c9f695e960fd7ccbb8ac725dd', '3d664bd5b38f53c2ef3e437d2f9df6c3', '2021-10-21 13:01:58', 'computer'),
+	(721, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-21 13:02:38', 'computer'),
+	(722, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-21 13:03:25', 'computer'),
+	(723, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-22 20:26:50', 'computer'),
+	(724, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-22 20:36:37', 'computer'),
+	(725, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-22 21:41:03', 'computer'),
+	(726, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-23 03:36:02', 'computer'),
+	(727, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-10-23 03:36:20', 'computer');
 /*!40000 ALTER TABLE `logins` ENABLE KEYS */;
 
 -- Dumping structure for table friends.media_styler
@@ -943,7 +1101,7 @@ CREATE TABLE IF NOT EXISTS `music_chat` (
   `music_hash` longtext NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table friends.music_chat: 0 rows
 /*!40000 ALTER TABLE `music_chat` DISABLE KEYS */;
@@ -956,10 +1114,17 @@ CREATE TABLE IF NOT EXISTS `music_favourite` (
   `favour_b` longtext NOT NULL,
   `hash` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.music_favourite: 0 rows
+-- Dumping data for table friends.music_favourite: 6 rows
 /*!40000 ALTER TABLE `music_favourite` DISABLE KEYS */;
+INSERT INTO `music_favourite` (`id`, `favour_g`, `favour_b`, `hash`) VALUES
+	(2, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '05094db99f663d953b88fde685decb74'),
+	(3, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', 'cc68adaf03912171cfbdde26d2136715'),
+	(4, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', 'f3bec1b865779dc2e9e0f99a4343eff6'),
+	(8, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', 'f151ac73cd72c26a8f04c83dbe64ff5d'),
+	(6, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', 'db7c2e1c50387fb1a7e2a63734e46f49'),
+	(7, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '928cdd1cc2dc70b59f032177a0b1fdf3');
 /*!40000 ALTER TABLE `music_favourite` ENABLE KEYS */;
 
 -- Dumping structure for table friends.music_listening
@@ -970,9 +1135,9 @@ CREATE TABLE IF NOT EXISTS `music_listening` (
   `music_key` longtext NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.music_listening: 10 rows
+-- Dumping data for table friends.music_listening: 18 rows
 /*!40000 ALTER TABLE `music_listening` DISABLE KEYS */;
 INSERT INTO `music_listening` (`id`, `lisner_g`, `lisner_b`, `music_key`, `date`) VALUES
 	(1, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '32be4a2b30aee43096025a33a6f1503c', '2021-09-16 01:24:52'),
@@ -982,9 +1147,17 @@ INSERT INTO `music_listening` (`id`, `lisner_g`, `lisner_b`, `music_key`, `date`
 	(5, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '8fea74d88440daaf9b05592ba8300911', '2021-09-16 01:18:48'),
 	(6, '4c96ecac7236f324c384463ba5a62a65', '97d14b1c9f695e960fd7ccbb8ac725dd', '8fea74d88440daaf9b05592ba8300911', '2021-09-14 16:55:43'),
 	(7, '4c96ecac7236f324c384463ba5a62a65', '97d14b1c9f695e960fd7ccbb8ac725dd', '45ddd635871f5fe7ad9f7bba4899b793', '2021-09-14 16:56:16'),
-	(8, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '45ddd635871f5fe7ad9f7bba4899b793', '2021-09-20 06:40:58'),
-	(9, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '81a0d1bab69c0feaae4bd7b2c6521c37', '2021-09-21 22:02:21'),
-	(10, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '68bca12f60c945b101fbc42619eed0f8', '2021-09-21 22:18:01');
+	(8, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '45ddd635871f5fe7ad9f7bba4899b793', '2021-10-11 17:54:37'),
+	(9, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '81a0d1bab69c0feaae4bd7b2c6521c37', '2021-10-11 18:31:25'),
+	(10, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '68bca12f60c945b101fbc42619eed0f8', '2021-10-11 17:55:15'),
+	(11, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '767fa9d26db94195b8a7ecdaa8ac50a2', '2021-10-11 17:56:21'),
+	(12, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '05094db99f663d953b88fde685decb74', '2021-10-21 12:49:11'),
+	(13, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', 'cc68adaf03912171cfbdde26d2136715', '2021-10-21 13:00:19'),
+	(14, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', 'f3bec1b865779dc2e9e0f99a4343eff6', '2021-10-21 13:02:39'),
+	(15, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', 'db7c2e1c50387fb1a7e2a63734e46f49', '2021-10-21 12:44:59'),
+	(16, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', 'f151ac73cd72c26a8f04c83dbe64ff5d', '2021-10-21 12:48:34'),
+	(17, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '928cdd1cc2dc70b59f032177a0b1fdf3', '2021-10-21 12:41:02'),
+	(18, 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '2e17047d8113e8e4e3c1c3fe6bddc0d1', '2021-10-13 22:14:59');
 /*!40000 ALTER TABLE `music_listening` ENABLE KEYS */;
 
 -- Dumping structure for table friends.music_playist
@@ -994,7 +1167,7 @@ CREATE TABLE IF NOT EXISTS `music_playist` (
   `player_g` longtext NOT NULL,
   `player_b` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table friends.music_playist: 0 rows
 /*!40000 ALTER TABLE `music_playist` DISABLE KEYS */;
@@ -1007,15 +1180,26 @@ CREATE TABLE IF NOT EXISTS `music_uploader` (
   `uploader_g` longtext NOT NULL,
   `audio_key` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.music_uploader: ~4 rows (approximately)
+-- Dumping data for table friends.music_uploader: ~14 rows (approximately)
 /*!40000 ALTER TABLE `music_uploader` DISABLE KEYS */;
 INSERT INTO `music_uploader` (`id`, `uploader_q`, `uploader_g`, `audio_key`) VALUES
 	(1, '3d664bd5b38f53c2ef3e437d2f9df6c3', '4c96ecac7236f324c384463ba5a62a65', '68bca12f60c945b101fbc42619eed0f8'),
 	(2, '3d664bd5b38f53c2ef3e437d2f9df6c3', '4c96ecac7236f324c384463ba5a62a65', '81a0d1bab69c0feaae4bd7b2c6521c37'),
 	(3, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '45ddd635871f5fe7ad9f7bba4899b793'),
-	(4, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '8fea74d88440daaf9b05592ba8300911');
+	(4, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '8fea74d88440daaf9b05592ba8300911'),
+	(5, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '928cdd1cc2dc70b59f032177a0b1fdf3'),
+	(6, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '9e8c7639d29878aa03e2e687cbbbb9bc'),
+	(7, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '05094db99f663d953b88fde685decb74'),
+	(8, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '767fa9d26db94195b8a7ecdaa8ac50a2'),
+	(9, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'cc68adaf03912171cfbdde26d2136715'),
+	(10, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'f3bec1b865779dc2e9e0f99a4343eff6'),
+	(11, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'e0f55dc6b810567318521567c52e1bbc'),
+	(12, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'db7c2e1c50387fb1a7e2a63734e46f49'),
+	(13, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'aca98beec63bbdd93fd5522f8093fcbd'),
+	(14, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'f151ac73cd72c26a8f04c83dbe64ff5d'),
+	(15, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2e17047d8113e8e4e3c1c3fe6bddc0d1');
 /*!40000 ALTER TABLE `music_uploader` ENABLE KEYS */;
 
 -- Dumping structure for table friends.new_messagers
@@ -1040,9 +1224,9 @@ CREATE TABLE IF NOT EXISTS `notify` (
   `date` datetime NOT NULL,
   `category` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.notify: 51 rows
+-- Dumping data for table friends.notify: 62 rows
 /*!40000 ALTER TABLE `notify` DISABLE KEYS */;
 INSERT INTO `notify` (`id`, `notifyer_q`, `notifyer_g`, `key_holder`, `date`, `category`) VALUES
 	(1, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '106bbca401fc25c1343dc40a01dc3d38', '2021-09-06 00:21:20', 'blog'),
@@ -1055,13 +1239,13 @@ INSERT INTO `notify` (`id`, `notifyer_q`, `notifyer_g`, `key_holder`, `date`, `c
 	(8, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '554e8ad0980e5f53ce0c1f97ed801b9d', '2021-09-06 10:45:50', 'music'),
 	(9, '3d664bd5b38f53c2ef3e437d2f9df6c3', '4c96ecac7236f324c384463ba5a62a65', '32be4a2b30aee43096025a33a6f1503c', '2021-09-07 21:21:08', 'music'),
 	(10, '3d664bd5b38f53c2ef3e437d2f9df6c3', '4c96ecac7236f324c384463ba5a62a65', '554e8ad0980e5f53ce0c1f97ed801b9d', '2021-09-07 21:23:12', 'music'),
-	(11, '3d664bd5b38f53c2ef3e437d2f9df6c3', '4c96ecac7236f324c384463ba5a62a65', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2021-10-06 04:13:06', 'profile_viewed'),
+	(11, '3d664bd5b38f53c2ef3e437d2f9df6c3', '4c96ecac7236f324c384463ba5a62a65', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2021-10-21 13:02:02', 'profile_viewed'),
 	(12, '3d664bd5b38f53c2ef3e437d2f9df6c3', '4c96ecac7236f324c384463ba5a62a65', 'bd49d3c5464d76be231a55f6887a5d9a', '2021-09-07 22:07:41', 'post_viewed'),
 	(13, '3d664bd5b38f53c2ef3e437d2f9df6c3', '4c96ecac7236f324c384463ba5a62a65', '68bca12f60c945b101fbc42619eed0f8', '2021-09-07 22:28:27', 'music'),
 	(14, '3d664bd5b38f53c2ef3e437d2f9df6c3', '4c96ecac7236f324c384463ba5a62a65', 'c93c8ebb3838ad915bc112c9e15b8e63', '2021-09-07 23:03:37', 'post'),
 	(15, '3d664bd5b38f53c2ef3e437d2f9df6c3', '4c96ecac7236f324c384463ba5a62a65', '81a0d1bab69c0feaae4bd7b2c6521c37', '2021-09-08 00:20:42', 'music'),
 	(16, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'c93c8ebb3838ad915bc112c9e15b8e63', '2021-09-08 01:06:29', 'post_viewed'),
-	(19, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '4c96ecac7236f324c384463ba5a62a65', '2021-10-08 05:43:41', 'profile_viewed'),
+	(19, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '4c96ecac7236f324c384463ba5a62a65', '2021-10-21 12:40:06', 'profile_viewed'),
 	(21, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '68bca12f60c945b101fbc42619eed0f8', '2021-09-12 20:22:17', 'music'),
 	(22, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '24c21cbb98049537e06baf81c865695e', '2021-09-14 14:18:40', 'post'),
 	(23, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '24c21cbb98049537e06baf81c865695e', '2021-09-14 14:23:29', 'post_viewed'),
@@ -1095,7 +1279,18 @@ INSERT INTO `notify` (`id`, `notifyer_q`, `notifyer_g`, `key_holder`, `date`, `c
 	(51, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '7d3ad98be5d5f33cf1cf16390e908ac2', '2021-09-24 19:47:58', 'times'),
 	(52, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '7d3ad98be5d5f33cf1cf16390e908ac2', '2021-09-24 19:48:47', 'post_viewed'),
 	(53, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a2c0751e098f02ee23058bbdf951b91c', '2021-09-27 06:27:26', 'post'),
-	(54, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a2c0751e098f02ee23058bbdf951b91c', '2021-09-27 15:39:34', 'post_viewed');
+	(54, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a2c0751e098f02ee23058bbdf951b91c', '2021-09-27 15:39:34', 'post_viewed'),
+	(55, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '767fa9d26db94195b8a7ecdaa8ac50a2', '2021-10-11 17:56:21', 'music'),
+	(56, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '05094db99f663d953b88fde685decb74', '2021-10-11 17:58:24', 'music'),
+	(57, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'cc68adaf03912171cfbdde26d2136715', '2021-10-11 18:01:31', 'music'),
+	(58, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'f3bec1b865779dc2e9e0f99a4343eff6', '2021-10-11 18:01:47', 'music'),
+	(59, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'db7c2e1c50387fb1a7e2a63734e46f49', '2021-10-11 18:01:58', 'music'),
+	(60, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'f151ac73cd72c26a8f04c83dbe64ff5d', '2021-10-11 18:10:05', 'music'),
+	(61, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '928cdd1cc2dc70b59f032177a0b1fdf3', '2021-10-11 18:20:23', 'music'),
+	(62, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'dcd8ab6100d4abab29388326bb04205c', '2021-10-19 18:32:06', 'profile_viewed'),
+	(63, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2e17047d8113e8e4e3c1c3fe6bddc0d1', '2021-10-13 22:14:32', 'music'),
+	(64, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '98e2b9f2473e5a48cd11ec01fe71ddaa', '2021-10-19 10:32:50', 'show_viewed'),
+	(65, '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '62c95dc395a5c9f2fb2700a07b4157eb', '2021-10-19 18:33:45', 'show_viewed');
 /*!40000 ALTER TABLE `notify` ENABLE KEYS */;
 
 -- Dumping structure for table friends.notify_seen
@@ -1106,38 +1301,48 @@ CREATE TABLE IF NOT EXISTS `notify_seen` (
   `key__` longtext NOT NULL,
   `date_notify` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.notify_seen: 27 rows
+-- Dumping data for table friends.notify_seen: 37 rows
 /*!40000 ALTER TABLE `notify_seen` DISABLE KEYS */;
 INSERT INTO `notify_seen` (`id`, `seer_g`, `seer_q`, `key__`, `date_notify`) VALUES
-	(1, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'bd49d3c5464d76be231a55f6887a5d9a', '2021-10-06 04:46:57'),
+	(1, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'bd49d3c5464d76be231a55f6887a5d9a', '2021-10-21 12:39:18'),
 	(2, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '0bfda1cbe39a846936804ac1cd9be7e3', '2021-09-14 01:06:24'),
-	(3, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '106bbca401fc25c1343dc40a01dc3d38', '2021-10-01 13:59:25'),
+	(3, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '106bbca401fc25c1343dc40a01dc3d38', '2021-10-15 08:18:36'),
 	(4, '4c96ecac7236f324c384463ba5a62a65', '3d664bd5b38f53c2ef3e437d2f9df6c3', 'bd49d3c5464d76be231a55f6887a5d9a', '2021-10-06 03:53:16'),
 	(5, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '81a0d1bab69c0feaae4bd7b2c6521c37', '2021-09-21 22:02:06'),
-	(6, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2021-10-08 05:40:19'),
+	(6, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', '2021-10-21 12:39:54'),
 	(7, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'c93c8ebb3838ad915bc112c9e15b8e63', '2021-09-20 06:44:38'),
 	(8, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '24c21cbb98049537e06baf81c865695e', '2021-09-14 18:33:12'),
-	(9, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '656ca1f2bea96b490c3bc0789c2e4d45', '2021-10-06 04:46:53'),
+	(9, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '656ca1f2bea96b490c3bc0789c2e4d45', '2021-10-21 12:39:13'),
 	(10, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '5aad2e1a70858d75fa01cbbb36843165', '2021-09-15 10:50:28'),
-	(11, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '45ddd635871f5fe7ad9f7bba4899b793', '2021-10-08 05:40:19'),
-	(12, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '8fea74d88440daaf9b05592ba8300911', '2021-09-22 23:40:37'),
+	(11, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '45ddd635871f5fe7ad9f7bba4899b793', '2021-10-21 12:39:54'),
+	(12, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '8fea74d88440daaf9b05592ba8300911', '2021-10-18 18:28:11'),
 	(13, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'c20ac9c2a56f52af16e8b8458867c065', '2021-09-15 10:42:57'),
-	(14, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'd773191630047b252d3aa68e13a22db5', '2021-10-06 07:11:16'),
+	(14, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'd773191630047b252d3aa68e13a22db5', '2021-10-15 08:20:21'),
 	(15, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'fecf20c8a6ec69acc6c6d39e828b53ee', '2021-09-15 23:59:50'),
 	(16, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'd37e4b396e5a6f9f6a951bfbf8e7f367', '2021-09-21 22:02:06'),
 	(17, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '433af5fa9814fa2fb63176c3e7072a20', '2021-09-21 22:02:06'),
 	(18, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'aefabd9263cf2d21ee6110fb0f4beaeb', '2021-09-30 18:40:41'),
-	(19, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '4537bbc4d901b980a7016d05bf0c2cbf', '2021-10-08 05:40:19'),
+	(19, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '4537bbc4d901b980a7016d05bf0c2cbf', '2021-10-21 12:39:54'),
 	(20, '4c96ecac7236f324c384463ba5a62a65', '3d664bd5b38f53c2ef3e437d2f9df6c3', '4537bbc4d901b980a7016d05bf0c2cbf', '2021-09-23 23:27:32'),
-	(21, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'afa3d737c4c0880eb326b0440f728eb5', '2021-10-08 05:40:19'),
+	(21, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'afa3d737c4c0880eb326b0440f728eb5', '2021-10-21 12:39:54'),
 	(22, '4c96ecac7236f324c384463ba5a62a65', '3d664bd5b38f53c2ef3e437d2f9df6c3', 'afa3d737c4c0880eb326b0440f728eb5', '2021-09-23 23:24:41'),
 	(23, '4c96ecac7236f324c384463ba5a62a65', '3d664bd5b38f53c2ef3e437d2f9df6c3', '4c96ecac7236f324c384463ba5a62a65', '2021-10-06 04:14:01'),
 	(24, '4c96ecac7236f324c384463ba5a62a65', '3d664bd5b38f53c2ef3e437d2f9df6c3', '45ddd635871f5fe7ad9f7bba4899b793', '2021-10-06 04:14:01'),
-	(25, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '7d3ad98be5d5f33cf1cf16390e908ac2', '2021-10-08 05:40:49'),
-	(26, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a2c0751e098f02ee23058bbdf951b91c', '2021-09-27 15:39:34'),
-	(27, '4c96ecac7236f324c384463ba5a62a65', '3d664bd5b38f53c2ef3e437d2f9df6c3', 'a2c0751e098f02ee23058bbdf951b91c', '2021-10-06 04:14:01');
+	(25, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '7d3ad98be5d5f33cf1cf16390e908ac2', '2021-10-20 03:15:36'),
+	(26, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a2c0751e098f02ee23058bbdf951b91c', '2021-10-18 17:47:24'),
+	(27, '4c96ecac7236f324c384463ba5a62a65', '3d664bd5b38f53c2ef3e437d2f9df6c3', 'a2c0751e098f02ee23058bbdf951b91c', '2021-10-06 04:14:01'),
+	(28, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2e17047d8113e8e4e3c1c3fe6bddc0d1', '2021-10-18 18:04:58'),
+	(29, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '928cdd1cc2dc70b59f032177a0b1fdf3', '2021-10-18 18:04:58'),
+	(30, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'f151ac73cd72c26a8f04c83dbe64ff5d', '2021-10-18 18:04:58'),
+	(31, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'db7c2e1c50387fb1a7e2a63734e46f49', '2021-10-18 17:47:16'),
+	(32, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'f3bec1b865779dc2e9e0f99a4343eff6', '2021-10-18 17:47:16'),
+	(33, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'cc68adaf03912171cfbdde26d2136715', '2021-10-18 17:47:16'),
+	(34, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '05094db99f663d953b88fde685decb74', '2021-10-18 17:47:16'),
+	(35, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '767fa9d26db94195b8a7ecdaa8ac50a2', '2021-10-18 17:47:16'),
+	(36, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '98e2b9f2473e5a48cd11ec01fe71ddaa', '2021-10-23 03:42:01'),
+	(37, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '62c95dc395a5c9f2fb2700a07b4157eb', '2021-10-19 19:08:05');
 /*!40000 ALTER TABLE `notify_seen` ENABLE KEYS */;
 
 -- Dumping structure for table friends.oauth_allowed_sites
@@ -1166,9 +1371,9 @@ CREATE TABLE IF NOT EXISTS `oauth_people` (
   `logged_key` longtext NOT NULL,
   `refresh_key` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=622 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=777 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.oauth_people: ~13 rows (approximately)
+-- Dumping data for table friends.oauth_people: ~12 rows (approximately)
 /*!40000 ALTER TABLE `oauth_people` DISABLE KEYS */;
 INSERT INTO `oauth_people` (`id`, `b`, `r`, `domain`, `expires_date`, `refresh_expires`, `start_date`, `logged_key`, `refresh_key`) VALUES
 	(42, 'a27119e13be90d9867b96e03ad6259de', 'cb47a9066a5ec8ab2ee01b7d309db38b', 'eboes__.test', '2021-09-07 22:51:21', '2021-09-07 23:21:21', '2021-09-07 21:51:21', '4d1ba4a1aaf858a782930bd69c95d057', 'f91d79476b8ea55df83b001ae68475a7'),
@@ -1180,10 +1385,10 @@ INSERT INTO `oauth_people` (`id`, `b`, `r`, `domain`, `expires_date`, `refresh_e
 	(394, 'a27119e13be90d9867b96e03ad6259de', 'cb47a9066a5ec8ab2ee01b7d309db38b', '127.0.0.1', '2021-09-23 00:11:26', '2021-09-23 00:41:26', '2021-09-22 23:11:26', '74982655bd8ab44d366bc1effafd8c87', '9f1bff18d2e51e2576836f049d5ea6dd'),
 	(421, '97d14b1c9f695e960fd7ccbb8ac725dd', 'ae1deb40d2480b4afeff58cd175439fd', '192.168.43.37', '2021-09-23 23:30:56', '2021-09-24 00:00:56', '2021-09-23 22:30:56', '69a72d85d0e203b21dbea7416fdb988b', '6258b4ca6ab50304b54af199270a61a4'),
 	(587, '97d14b1c9f695e960fd7ccbb8ac725dd', 'ae1deb40d2480b4afeff58cd175439fd', 'whir.test', '2021-10-06 04:37:28', '2021-10-06 05:07:28', '2021-10-06 03:37:28', '159ed4dc4741bcd14aa0a7f90e8c054e', 'f93c2ddf744d0bd8cb7780daceb23937'),
-	(589, '97d14b1c9f695e960fd7ccbb8ac725dd', 'ae1deb40d2480b4afeff58cd175439fd', 'f.test', '2021-10-06 04:51:37', '2021-10-06 05:21:37', '2021-10-06 03:51:37', '79bf005f3f5b5d0837f9f70f0b097758', 'c04116b4f157e7f1963d17d249fc0e55'),
-	(618, 'a27119e13be90d9867b96e03ad6259de', 'cb47a9066a5ec8ab2ee01b7d309db38b', 'f.test', '2021-10-08 06:43:23', '2021-10-08 07:13:23', '2021-10-08 05:43:23', '2888853127c5bee565b361a7aa5449a3', '3ca26a1c351a2827005351ace272d229'),
-	(620, 'a27119e13be90d9867b96e03ad6259de', 'cb47a9066a5ec8ab2ee01b7d309db38b', 'whir.test', '2021-10-08 07:08:03', '2021-10-08 07:38:03', '2021-10-08 06:08:03', 'f1da924547e8f4669d98b4f183ec743f', '9142310dd5918d42207e8cae16dee5c1'),
-	(621, 'a27119e13be90d9867b96e03ad6259de', 'cb47a9066a5ec8ab2ee01b7d309db38b', '192.168.43.37', '2021-10-08 07:08:56', '2021-10-08 07:38:56', '2021-10-08 06:08:56', '30fac750bb409b7274a66ccd61ff061e', 'ae196a8a6ae35c6f0e3aec9756140ea4');
+	(763, 'a27119e13be90d9867b96e03ad6259de', 'cb47a9066a5ec8ab2ee01b7d309db38b', '192.168.43.37', '2021-10-20 04:18:49', '2021-10-20 04:48:49', '2021-10-20 03:18:49', '59485108ec50ef1e34f4b8cff3f896b6', '33f09fa9accd546b7424c06ce3f3f848'),
+	(768, '97d14b1c9f695e960fd7ccbb8ac725dd', 'ae1deb40d2480b4afeff58cd175439fd', 'f.test', '2021-10-21 14:01:58', '2021-10-21 14:31:58', '2021-10-21 13:01:58', '79124181c121b480581153368b0ed2d6', 'c975e469889a960285f4cde717409452'),
+	(775, 'a27119e13be90d9867b96e03ad6259de', 'cb47a9066a5ec8ab2ee01b7d309db38b', 'f.test', '2021-10-23 04:36:02', '2021-10-23 05:06:02', '2021-10-23 03:36:02', 'fa64cb3b2c7598b3584967e14f28a5e2', '8ed0daae2ed8612eed59280d6fd4e875'),
+	(776, 'a27119e13be90d9867b96e03ad6259de', 'cb47a9066a5ec8ab2ee01b7d309db38b', 'whir.test', '2021-10-23 04:36:20', '2021-10-23 05:06:20', '2021-10-23 03:36:20', '36ac9ee01bebf127d00ad6e8afe1a226', '94b01a191824eab8553ea58108220830');
 /*!40000 ALTER TABLE `oauth_people` ENABLE KEYS */;
 
 -- Dumping structure for table friends.online
@@ -1198,8 +1403,8 @@ CREATE TABLE IF NOT EXISTS `online` (
 -- Dumping data for table friends.online: 4 rows
 /*!40000 ALTER TABLE `online` DISABLE KEYS */;
 INSERT INTO `online` (`id`, `r`, `b`, `date`) VALUES
-	(1, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'a27119e13be90d9867b96e03ad6259de', '2021-10-08 06:20:20'),
-	(2, 'ae1deb40d2480b4afeff58cd175439fd', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-10-06 04:17:11'),
+	(1, 'cb47a9066a5ec8ab2ee01b7d309db38b', 'a27119e13be90d9867b96e03ad6259de', '2021-10-23 03:50:26'),
+	(2, 'ae1deb40d2480b4afeff58cd175439fd', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-10-21 13:02:06'),
 	(3, '6ee6e363e613eab32711cb51b4746490', 'dc018604aa6985f7b31db6b7e69adfb2', '2021-09-17 14:59:05'),
 	(4, '0557a7e5f39ecc8d9fb2a5efcfd1acfe', '58bc1ef590b89f22a4a0194722f3ffb4', '2021-09-22 23:09:49');
 /*!40000 ALTER TABLE `online` ENABLE KEYS */;
@@ -1210,9 +1415,9 @@ CREATE TABLE IF NOT EXISTS `post` (
   `word` longtext,
   `keey` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.post: 33 rows
+-- Dumping data for table friends.post: 34 rows
 /*!40000 ALTER TABLE `post` DISABLE KEYS */;
 INSERT INTO `post` (`id`, `word`, `keey`) VALUES
 	(1, '#actressÂ #publicfigure', '0bfda1cbe39a846936804ac1cd9be7e3'),
@@ -1247,7 +1452,8 @@ INSERT INTO `post` (`id`, `word`, `keey`) VALUES
 	(30, NULL, '00019c7673df1315366c9577b3d37e7a'),
 	(31, NULL, '3c91ca2e6434b33cbcae4c34f42525e2'),
 	(32, NULL, '169149fb1b563d976ca63babf129865b'),
-	(33, NULL, '48a27b6552028264ded54ebd92faba25');
+	(33, 'Confused', '48a27b6552028264ded54ebd92faba25'),
+	(34, NULL, '02adf4f75a52a8ce0ca6b93ef581522a');
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 
 -- Dumping structure for table friends.post_audios
@@ -1385,9 +1591,9 @@ CREATE TABLE IF NOT EXISTS `react_post` (
   `date` datetime NOT NULL,
   `device` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.react_post: 8 rows
+-- Dumping data for table friends.react_post: 7 rows
 /*!40000 ALTER TABLE `react_post` DISABLE KEYS */;
 INSERT INTO `react_post` (`id`, `key_link`, `react`, `reacter_r`, `reacter_q`, `date`, `device`) VALUES
 	(6, '106bbca401fc25c1343dc40a01dc3d38', 'rate', 'cb47a9066a5ec8ab2ee01b7d309db38b', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-09-06 10:07:12', 'Android'),
@@ -1396,22 +1602,27 @@ INSERT INTO `react_post` (`id`, `key_link`, `react`, `reacter_r`, `reacter_q`, `
 	(8, '433af5fa9814fa2fb63176c3e7072a20', 'love', 'cb47a9066a5ec8ab2ee01b7d309db38b', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-09-16 06:04:22', 'computer'),
 	(10, 'c93c8ebb3838ad915bc112c9e15b8e63', 'like', 'cb47a9066a5ec8ab2ee01b7d309db38b', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-09-20 06:45:10', 'computer'),
 	(11, 'afa3d737c4c0880eb326b0440f728eb5', 'love', 'ae1deb40d2480b4afeff58cd175439fd', '3d664bd5b38f53c2ef3e437d2f9df6c3', '2021-09-23 22:34:45', 'Android'),
-	(12, 'afa3d737c4c0880eb326b0440f728eb5', 'love', 'cb47a9066a5ec8ab2ee01b7d309db38b', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-09-23 22:34:48', 'computer'),
 	(13, '4537bbc4d901b980a7016d05bf0c2cbf', 'love', 'cb47a9066a5ec8ab2ee01b7d309db38b', '62fd2c287ba0e6c8851ecaa1aaf5c30c', '2021-09-23 22:37:24', 'computer');
 /*!40000 ALTER TABLE `react_post` ENABLE KEYS */;
 
 -- Dumping structure for table friends.shows
 CREATE TABLE IF NOT EXISTS `shows` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` longtext NOT NULL,
+  `name_` longtext NOT NULL,
   `owner_b` longtext NOT NULL,
-  `key` longtext NOT NULL,
+  `key_` longtext NOT NULL,
   `create_date` datetime NOT NULL,
+  `desc_` longtext NOT NULL,
+  `cover` longtext NOT NULL,
+  `publish` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.shows: ~0 rows (approximately)
+-- Dumping data for table friends.shows: ~1 rows (approximately)
 /*!40000 ALTER TABLE `shows` DISABLE KEYS */;
+INSERT INTO `shows` (`id`, `name_`, `owner_b`, `key_`, `create_date`, `desc_`, `cover`, `publish`) VALUES
+	(6, 'baby', 'a27119e13be90d9867b96e03ad6259de', '62c95dc395a5c9f2fb2700a07b4157eb', '2021-10-13 22:28:22', 'love you', 'icons/show_cover.jpeg', 0),
+	(7, 'Dave Chapelle special', 'a27119e13be90d9867b96e03ad6259de', '98e2b9f2473e5a48cd11ec01fe71ddaa', '2021-10-16 17:40:27', '@josh(com)gmailÂ @uche(com)gmailÂ #loveÂ #netflixspecialÂ ', 'icons/show_cover.jpeg', 0);
 /*!40000 ALTER TABLE `shows` ENABLE KEYS */;
 
 -- Dumping structure for table friends.timeline
@@ -1426,9 +1637,9 @@ CREATE TABLE IF NOT EXISTS `timeline` (
   `category` longtext NOT NULL,
   `tied` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.timeline: 26 rows
+-- Dumping data for table friends.timeline: 27 rows
 /*!40000 ALTER TABLE `timeline` DISABLE KEYS */;
 INSERT INTO `timeline` (`id`, `date`, `key_link`, `saved`, `poster_g`, `poster_q`, `device`, `category`, `tied`) VALUES
 	(1, '2021-09-06 00:32:05', '0bfda1cbe39a846936804ac1cd9be7e3', 1, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'Android', 'post', ''),
@@ -1456,7 +1667,8 @@ INSERT INTO `timeline` (`id`, `date`, `key_link`, `saved`, `poster_g`, `poster_q
 	(29, '2021-09-27 06:27:26', 'a2c0751e098f02ee23058bbdf951b91c', 1, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'computer', 'post', ''),
 	(30, NULL, '00019c7673df1315366c9577b3d37e7a', 0, '4c96ecac7236f324c384463ba5a62a65', '3d664bd5b38f53c2ef3e437d2f9df6c3', NULL, 'post', ''),
 	(31, NULL, '3c91ca2e6434b33cbcae4c34f42525e2', 0, '4c96ecac7236f324c384463ba5a62a65', '3d664bd5b38f53c2ef3e437d2f9df6c3', NULL, 'blog', ''),
-	(33, NULL, '48a27b6552028264ded54ebd92faba25', 0, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', NULL, 'post', '');
+	(33, NULL, '48a27b6552028264ded54ebd92faba25', 0, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', NULL, 'post', ''),
+	(34, NULL, '02adf4f75a52a8ce0ca6b93ef581522a', 0, 'ed26971b925c8c6a6d0c80481a8d7a5c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', NULL, 'blog', '');
 /*!40000 ALTER TABLE `timeline` ENABLE KEYS */;
 
 -- Dumping structure for table friends.topics
@@ -1508,7 +1720,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table friends.users: 4 rows
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `full`, `username`, `email`, `hash`, `act`, `reset_pass_key`, `r`, `q`, `g`, `b`, `date`, `prof_pix`, `cover`, `date_birth`, `country`, `state`, `city`, `LGA`, `gender`, `phone`, `status`, `theme`) VALUES
-	(1, 'Udekwe Chiazam', '@chi(com)gmail', 'chi@gmail.com', '$2y$10$OS3MP/JujNCctfRfShF62end0SQlW3m0gbI4s99YQc0LpndeC/xxK', 1, NULL, 'cb47a9066a5ec8ab2ee01b7d309db38b', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-06 00:12:22', 'files/images/c7d3928dbacc9deab1ab57e0bc4ee387.jpg', 'files/images/06f746fbcc1598dc57cde03c92cb2c99.jpg', '2001-03-27', 'Nigeria', 'Enugu', 'nsukka', 'uzo-uwani', 'male', '', 'love all yall text me at jochalazacub@gmail.com', 'pure'),
+	(1, 'Udekwe Chiazam', '@chi(com)gmail', 'chi@gmail.com', '$2y$10$OS3MP/JujNCctfRfShF62end0SQlW3m0gbI4s99YQc0LpndeC/xxK', 1, NULL, 'cb47a9066a5ec8ab2ee01b7d309db38b', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'ed26971b925c8c6a6d0c80481a8d7a5c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-06 00:12:22', 'files/images/c7d3928dbacc9deab1ab57e0bc4ee387.jpg', 'files/images/06f746fbcc1598dc57cde03c92cb2c99.jpg', '2001-03-27', 'Nigeria', 'Enugu', 'nsukka', 'uzo-uwani', 'male', '', '@josh(com)gmailÂ is my #brother', 'light'),
 	(2, 'Joshua Udekwe', '@josh(com)gmail', 'josh@gmail.com', '$2y$10$Kx9RMZo72y/45/cuQgoSyeIE6hHhRb8YdoduO6RMUkNq6uWyDDzHW', 1, NULL, 'ae1deb40d2480b4afeff58cd175439fd', '3d664bd5b38f53c2ef3e437d2f9df6c3', '4c96ecac7236f324c384463ba5a62a65', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-09-07 19:33:55', 'files/images/654689d9c6a4f4fc27c9e94538df1e40.jpg', 'files/images/3b2ad53b0ac1365cc06f58cd54fd2856.jpg', '1999-01-07', 'Nigeria', 'Enugu', 'Nsukka', 'No 17 church road onuiyi', 'male', '', '', 'light'),
 	(3, 'Emma Ozoko', '@emma(com)gmail', 'emma@gmail.com', '$2y$10$xnKap24kI/JAfiYPBMs/o.ua12/8frYQKodPvZQ94KhZEIFNug342', 1, NULL, '6ee6e363e613eab32711cb51b4746490', '90d882af1f362a4b95235df22a4e79c5', 'dcd8ab6100d4abab29388326bb04205c', 'dc018604aa6985f7b31db6b7e69adfb2', '2021-09-17 01:49:45', 'icons/landscape-photography-of-green-grass-field-1461027.jpg', 'icons/working-in-a-group-6224.jpg', '2001-02-28', 'Nigeria', 'Enugu', 'Nsukka', 'Ziks flat', 'male', NULL, NULL, 'pure'),
 	(4, 'Uche Ukwueze', '@uche(com)gmail', 'uche@gmail.com', '$2y$10$vuqmWaxO12Xjnj/p73ZmRO1R27EJdkZsyX0gPu8SohgzVv9qbCc.u', 1, NULL, '0557a7e5f39ecc8d9fb2a5efcfd1acfe', '63af7da6c6cae7fbd8618d45b493a67e', 'addcdcf43dea9a1c76a26cb28b6ab59c', '58bc1ef590b89f22a4a0194722f3ffb4', '2021-09-17 14:59:45', 'files/images/0fcba092e7c217aad2d61272607c9393.jfif', 'files/images/8f15cd53a008b961778461e620b67450.jpg', '2000-01-28', 'Nigeria', 'Enugu', 'Nsukka', 'ziks flat', 'male', NULL, NULL, 'pure');
@@ -1536,46 +1748,58 @@ CREATE TABLE IF NOT EXISTS `views_post` (
   `date` datetime NOT NULL,
   `category` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=48 DEFAULT CHARSET=latin1;
 
--- Dumping data for table friends.views_post: 35 rows
+-- Dumping data for table friends.views_post: 47 rows
 /*!40000 ALTER TABLE `views_post` DISABLE KEYS */;
 INSERT INTO `views_post` (`id`, `key_post`, `q`, `b`, `date`, `category`) VALUES
-	(1, 'bd49d3c5464d76be231a55f6887a5d9a', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-06 04:46:57', 'post_viewed'),
+	(1, 'bd49d3c5464d76be231a55f6887a5d9a', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-21 12:39:18', 'post_viewed'),
 	(2, '0bfda1cbe39a846936804ac1cd9be7e3', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-14 01:06:24', 'post_viewed'),
-	(3, '106bbca401fc25c1343dc40a01dc3d38', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-01 13:59:25', 'post_viewed'),
+	(3, '106bbca401fc25c1343dc40a01dc3d38', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-15 08:18:36', 'post_viewed'),
 	(4, '32be4a2b30aee43096025a33a6f1503c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-16 01:24:52', 'music'),
 	(5, '554e8ad0980e5f53ce0c1f97ed801b9d', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-03 01:37:06', 'music'),
 	(6, '32be4a2b30aee43096025a33a6f1503c', '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-09-08 00:36:14', 'music'),
 	(7, '554e8ad0980e5f53ce0c1f97ed801b9d', '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-09-23 23:22:46', 'music'),
-	(8, 'ed26971b925c8c6a6d0c80481a8d7a5c', '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-10-06 04:13:06', 'profile_viewed'),
+	(8, 'ed26971b925c8c6a6d0c80481a8d7a5c', '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-10-21 13:02:02', 'profile_viewed'),
 	(9, 'bd49d3c5464d76be231a55f6887a5d9a', '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-10-06 03:53:16', 'post_viewed'),
 	(10, '68bca12f60c945b101fbc42619eed0f8', '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-09-08 00:38:23', 'music'),
 	(11, '81a0d1bab69c0feaae4bd7b2c6521c37', '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-09-08 00:36:20', 'music'),
 	(12, 'c93c8ebb3838ad915bc112c9e15b8e63', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-20 06:44:38', 'post_viewed'),
-	(13, '4c96ecac7236f324c384463ba5a62a65', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-08 05:43:41', 'profile_viewed'),
-	(14, '68bca12f60c945b101fbc42619eed0f8', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-21 22:18:01', 'music'),
+	(13, '4c96ecac7236f324c384463ba5a62a65', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-21 12:40:06', 'profile_viewed'),
+	(14, '68bca12f60c945b101fbc42619eed0f8', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-21 12:50:33', 'music'),
 	(15, '24c21cbb98049537e06baf81c865695e', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-14 18:33:12', 'post_viewed'),
-	(16, '656ca1f2bea96b490c3bc0789c2e4d45', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-06 04:46:53', 'post_viewed'),
+	(16, '656ca1f2bea96b490c3bc0789c2e4d45', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-21 12:39:13', 'post_viewed'),
 	(17, '5aad2e1a70858d75fa01cbbb36843165', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-15 10:50:28', 'post_viewed'),
 	(18, '8fea74d88440daaf9b05592ba8300911', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-18 05:42:06', 'music'),
 	(19, '8fea74d88440daaf9b05592ba8300911', '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-10-05 19:41:20', 'music'),
 	(20, '45ddd635871f5fe7ad9f7bba4899b793', '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-09-14 16:56:16', 'music'),
-	(21, '45ddd635871f5fe7ad9f7bba4899b793', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-20 09:41:48', 'music'),
+	(21, '45ddd635871f5fe7ad9f7bba4899b793', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-18 17:46:04', 'music'),
 	(22, 'c20ac9c2a56f52af16e8b8458867c065', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-15 10:42:57', 'post_viewed'),
-	(23, 'd773191630047b252d3aa68e13a22db5', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-06 07:11:16', 'post_viewed'),
+	(23, 'd773191630047b252d3aa68e13a22db5', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-15 08:20:21', 'post_viewed'),
 	(24, 'fecf20c8a6ec69acc6c6d39e828b53ee', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-15 23:59:50', 'post_viewed'),
 	(25, 'd37e4b396e5a6f9f6a951bfbf8e7f367', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-16 02:32:13', 'post_viewed'),
 	(26, 'food', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-08 05:41:00', 'dictionary'),
-	(27, '81a0d1bab69c0feaae4bd7b2c6521c37', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-22 14:50:08', 'music'),
+	(27, '81a0d1bab69c0feaae4bd7b2c6521c37', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-11 18:31:25', 'music'),
 	(28, '45ddd635871f5fe7ad9f7bba4899b793', '63af7da6c6cae7fbd8618d45b493a67e', '58bc1ef590b89f22a4a0194722f3ffb4', '2021-09-22 23:09:13', 'music'),
 	(29, '4c96ecac7236f324c384463ba5a62a65', '63af7da6c6cae7fbd8618d45b493a67e', '58bc1ef590b89f22a4a0194722f3ffb4', '2021-09-22 23:06:03', 'profile_viewed'),
 	(30, 'aefabd9263cf2d21ee6110fb0f4beaeb', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-30 18:40:41', 'post_viewed'),
-	(31, '4537bbc4d901b980a7016d05bf0c2cbf', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-26 19:54:27', 'post_viewed'),
+	(31, '4537bbc4d901b980a7016d05bf0c2cbf', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-15 08:14:11', 'post_viewed'),
 	(32, '4537bbc4d901b980a7016d05bf0c2cbf', '3d664bd5b38f53c2ef3e437d2f9df6c3', '97d14b1c9f695e960fd7ccbb8ac725dd', '2021-09-23 23:27:32', 'post_viewed'),
-	(33, 'afa3d737c4c0880eb326b0440f728eb5', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-27 05:31:14', 'post_viewed'),
-	(34, '7d3ad98be5d5f33cf1cf16390e908ac2', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-08 05:40:48', 'post_viewed'),
-	(35, 'a2c0751e098f02ee23058bbdf951b91c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-09-27 15:39:33', 'post_viewed');
+	(33, 'afa3d737c4c0880eb326b0440f728eb5', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-11 07:29:22', 'post_viewed'),
+	(34, '7d3ad98be5d5f33cf1cf16390e908ac2', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-20 03:15:36', 'post_viewed'),
+	(35, 'a2c0751e098f02ee23058bbdf951b91c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-12 07:29:59', 'post_viewed'),
+	(36, '767fa9d26db94195b8a7ecdaa8ac50a2', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-18 14:08:14', 'music'),
+	(37, '05094db99f663d953b88fde685decb74', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-21 12:49:11', 'music'),
+	(38, 'cc68adaf03912171cfbdde26d2136715', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-21 13:00:19', 'music'),
+	(39, 'f3bec1b865779dc2e9e0f99a4343eff6', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-21 13:02:39', 'music'),
+	(40, 'db7c2e1c50387fb1a7e2a63734e46f49', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-21 12:44:59', 'music'),
+	(41, 'f151ac73cd72c26a8f04c83dbe64ff5d', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-21 12:48:34', 'music'),
+	(42, 'love', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-21 12:39:43', 'dictionary'),
+	(43, '928cdd1cc2dc70b59f032177a0b1fdf3', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-21 12:41:02', 'music'),
+	(44, 'dcd8ab6100d4abab29388326bb04205c', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-19 18:32:06', 'profile_viewed'),
+	(45, '2e17047d8113e8e4e3c1c3fe6bddc0d1', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-15 13:40:55', 'music'),
+	(46, '98e2b9f2473e5a48cd11ec01fe71ddaa', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-19 10:32:50', 'show_viewed'),
+	(47, '62c95dc395a5c9f2fb2700a07b4157eb', '62fd2c287ba0e6c8851ecaa1aaf5c30c', 'a27119e13be90d9867b96e03ad6259de', '2021-10-19 18:33:45', 'show_viewed');
 /*!40000 ALTER TABLE `views_post` ENABLE KEYS */;
 
 -- Dumping structure for table friends.view_later
