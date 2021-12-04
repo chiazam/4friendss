@@ -2,6 +2,7 @@
 
 use auto__loader as auto___load;
 use mysqli__ as mysqli_conns;
+use hash_maker as hasher;
 
 require_once '../../classes/auto_loader_happener.php';
 
@@ -29,16 +30,14 @@ if (!post_checker::check_isset_post(['cate_post'])) {
     new returner\final_returner_json(['permission' => 'denied due to insuffiecient credentials']);
 }
 
-$array_content = ["post", "times", "blog", 'event', 'poll', 'cinema'];
-
-if (!in_array($_post_['cate_post'], $array_content)) {
+if (!in_array($_post_['cate_post'],gen_vars\gen_vars::$array_content)) {
 
     new returner\final_returner_json(['mis_conduct' => 'wrong credentials', 'field' => 'cate_post']);
 }
 
 if (checkist\num_of_data_in_table::num_of_data_in_table("timeline", "key_link", ["saved" => "0", "poster_g" => $_session_["g"], "poster_q" => $_session_["q"], "category" => $_post_['cate_post']]) === 0) {
 
-    $hash = md5(time_string::time_to_string(time()) . time_string::time_to_string(time()) . time_string::time_to_string(time()) . time_string::time_to_string(time()) . time_string::time_to_string(time()));
+    $hash = hasher\hash_maker::post_times_hash_maker($_session_["b"],$_session_["g"]);
 
     checkist\add_data_in_table::add_data_in_table("timeline", ["key_link" => $hash, "saved" => 0, "poster_g" => $_session_["g"], "poster_q" => $_session_["q"], "category" => $_post_['cate_post'],"tied" => ""]);
 }

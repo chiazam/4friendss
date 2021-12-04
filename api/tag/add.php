@@ -21,14 +21,14 @@ if (checkist\num_of_data_in_table::num_of_data_in_table("users", "r,q", ["q" => 
         new returner\final_returner_json(['message' => ["tagged" => false]]);
     } else {
 
-        if (checkist\num_of_data_in_table::num_of_data_in_table("post_tags", "*", ["post_key" => $key_link]) < 10) {
+        if (checkist\num_of_data_in_table::num_of_data_in_table("post_tags", "*", ["post_key" => $key_link]) >= 30) {
+
+            new returner\final_returner_json(['message' => ["tagged" => false]]);
+        } else {
 
             checkist\add_data_in_table::add_data_in_table("post_tags", ["post_key" => $key_link, "tagged_r" => $data["r"], "tagged_q" => $data["q"]]);
 
             new returner\final_returner_json(['message' => ["tagged" => true]]);
-        } else {
-
-            new returner\final_returner_json(['message' => ["tagged" => false]]);
         }
     }
 } else {

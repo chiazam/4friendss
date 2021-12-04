@@ -62,7 +62,7 @@ if (check_table_num\num_of_data_in_table::num_of_data_in_table("verify", '*', ["
 
         mail\mail_maker::mailer__ward($to, $subject, $body);
 
-        new returner\final_returner_json(['success' => 'token resent to email or email sppam, please if in spam help us tag it not spam.']);
+        new returner\final_returner_json(['success' => 'token resent to email or email spam, please if in spam help us tag it not spam.']);
     } else {
 
         $to = FRIENDS_EMAIL;

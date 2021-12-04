@@ -32,7 +32,7 @@ if ($_login_info === false) {
     } else if (!filter_var(trim($_post_["email"]), FILTER_VALIDATE_EMAIL)) {
 
         new returner\final_returner_json(['mis_conduct' => 'invalid', 'field' => 'email']);
-    } else if (strlen(trim($_post_["password"])) < 6) {
+    } else if (strlen(trim($_post_["password"])) < 10) {
 
         new returner\final_returner_json(['mis_conduct' => 'invalid length', 'field' => 'password']);
     }

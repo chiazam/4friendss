@@ -29,13 +29,13 @@ if (check\if_get\check_isset_get::check_isset_get(['theme'])) {
 switch ($meriden_position) {
     case "pm":
 
-        die(compress_css('../lib/theme/dark.css'));
+        die(compress_css('../lib/theme/hole.css'));
 
         break;
 
     case "am":
 
-        die(compress_css('../lib/theme/light.css'));
+        die(compress_css('../lib/theme/pure.css'));
 
         break;
 

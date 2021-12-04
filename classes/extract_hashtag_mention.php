@@ -14,96 +14,100 @@ class extract_hashtag_mention
     const regex_tag = '/@([A-Za-z0-9\_\(\)\.]+)/';
 
 
-    public static function regex_returner($bool_string=true) {
+    public static function regex_returner($bool_string = true)
+    {
 
-        if(is_bool($bool_string)){
+        if (is_bool($bool_string)) {
 
-            if($bool_string){
+            if ($bool_string) {
 
                 return self::regex_hash_tag;
-
-            }else{
+            } else {
 
                 return self::regex_tag;
-
             }
-
-        }else{
+        } else {
 
             return $bool_string;
-
         }
-
     }
 
-    public static function array_mention_hashtags(string $string, $bool_string=true) {
+    public static function array_mention_hashtags(string $string, $bool_string = true)
+    {
 
         /* Match hashtags */
 
         $keywords = [];
 
         preg_match_all(self::regex_returner($bool_string), $string, $matches);
-       
-         /* Add all matches to array */
-         foreach ($matches[1] as $match) {
 
-           array_push($keywords, $match);
+        $stored_ready = [];
 
-         }
+        /* Add all matches to array */
+        foreach ($matches[1] as $match) {
 
-         if(count($keywords)===0){
+            if (!in_array(strtolower($match), $stored_ready)) {
 
-            return ['none'=>true];
+                array_push($keywords, $match);
 
-         }else if(count($keywords) > 0){
-       
+                array_push($stored_ready, strtolower($match));
+            }
+        }
+
+        if (count($keywords) === 0) {
+
+            return ['none' => true];
+        } else if (count($keywords) > 0) {
+
             return ($keywords);
-
-         }
-
+        }
     }
 
 
-    public static function string_mention_hashtags(string $string, $bool_string=true) {
+    public static function string_mention_hashtags(string $string, $bool_string = true)
+    {
 
         /* Match hashtags */
-       
-        $keywords="";
-       
+
+        $keywords = "";
+
         preg_match_all(self::regex_returner($bool_string), $string, $matches);
 
         $count = 0;
-       
-         /* Add all matches to array */
-         foreach ($matches[1] as $match) {
 
-            $comma ="";
+        $stored_ready = [];
 
-            if($count > 0){
+        /* Add all matches to array */
+        foreach ($matches[1] as $match) {
 
-                $comma = ", ";
+            if (!in_array(strtolower($match), $stored_ready)) {
 
+                $comma = "";
+
+                if ($count > 0) {
+
+                    $comma = ", ";
+                }
+
+                $keywords .= $comma . $match;
+
+                $count++;
+
+                array_push($stored_ready, strtolower($match));
             }
+        }
 
-           $keywords .= $comma.$match;
-
-           $count++;
-
-         }
-       
         return trim($keywords);
-
     }
 
-    public static function link_mention_hashtags(string $string, string $preffix, $bool_string=true) {
+    public static function link_mention_hashtags(string $string, string $preffix, $bool_string = true)
+    {
 
         preg_match_all(self::regex_returner($bool_string), $string, $matches);
         foreach ($matches[1] as $match) {
-           $string = str_replace($preffix.$match, "<a href='{$match}'>{$preffix}{$match}</a>", $string);
+            $string = str_replace($preffix . $match, "<a href='{$match}'>{$preffix}{$match}</a>", $string);
         }
-       
-        return $string;
 
+        return $string;
     }
-    
 }

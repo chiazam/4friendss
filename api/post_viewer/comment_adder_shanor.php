@@ -24,6 +24,7 @@ use check\if_post\check_isset_post as post_checker;
 use check\data_in_table as checkist;
 use time\time_to_string as time_string;
 use post_timeline_stream as timestream;
+use hash_maker as hasher;
 
 if (!post_checker::check_isset_post(["word", "key", "device"])) {
 
@@ -43,7 +44,7 @@ if (empty(trim($_post_["word"]))) {
 
 if (timestream\post_get_streamer::is_comment_worthy($_post_["key"])|| checkist\num_of_data_in_table::num_of_data_in_table("comment_post", "*", ["key_main" => $_post_["key"]])) {
 
-    $hash = md5(time_string::time_to_string(time()) . time_string::time_to_string(time()) . time_string::time_to_string(time()) . time_string::time_to_string(time()) . time_string::time_to_string(time()));
+    $hash = hasher\hash_maker::post_times_hash_maker($_session_["b"],$_session_["g"]);
 
     checkist\add_data_in_table::add_data_in_table("comment_post", ["commenter_b" => $_session_["b"], "commenter_g" => $_session_["g"], "date" => time\time_to_string::time_to_string(time()), "comment_word" => ucfirst($_post_["word"]), "key_link" => $_post_["key"], "device" => $_post_["device"], "key_main" => $hash]);
 

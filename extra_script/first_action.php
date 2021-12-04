@@ -38,6 +38,24 @@ $malware_real = false;
 
 $alphabet_array = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
+function convert_base ($num ,$to=32, $from=10){
+
+    return base_convert($num,$from,$to);
+
+}
+
+function random(){
+
+    return mt_rand() / (mt_getrandmax() + 1);
+
+}
+
+function rand_hash($num=""){
+
+ return @convert_base(($num.(time()*random())));
+
+}
+
 function get_num_array_range_list($num_start=0,$num_end=100) {
 
     $list = [];
@@ -364,6 +382,8 @@ function return_dir_files($folder) {
             array_push($file_namess, $var);
         }
     }
+
+    sort($file_namess);
 
     return $file_namess;
 }

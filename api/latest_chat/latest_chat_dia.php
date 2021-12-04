@@ -22,20 +22,35 @@ if ($_login_info === false) {
 
 use check\if_get\check_isset_get as get_checker;
 
-if (!get_checker::check_isset_get(["limit", "offset"])) {
+if (!get_checker::check_isset_get(["limit", "offset", "id_marker", "start_end"])) {
 
     new returner\final_returner_json(['permission' => 'denied due to insuffiecient credentials']);
 }
 
 $limit = 10;
 $offset = 0;
+$id_marker = 0;
+$start_end = true;
 
 if (is_numeric($_GET["offset"])) {
+
     $offset = $_GET["offset"];
 }
 if (is_numeric($_GET["limit"])) {
+
     $limit = $_GET["limit"];
 }
 
+if (is_numeric($_GET["id_marker"])) {
 
-new returner\final_returner_json(['message' => ['latest_chat' => (new notify\get\__latest_chat_preview($limit, $offset, $_session_['q'], $_session_['b']))->get_preview_chat_crib()]]);
+    $id_marker = $_GET["id_marker"];
+
+}
+
+if ($_GET["start_end"]=="false") {
+
+    $start_end = false;
+
+}
+
+new returner\final_returner_json(['message' => ['latest_chat' => notify\get\__latest_chat_preview::get_preview_chat_crib($limit, $offset, $_session_['q'],$id_marker,$start_end, "../../")]]);

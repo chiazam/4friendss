@@ -24,4 +24,6 @@ $encoded_word = chat_man\chat_encoder_decoder::encodeChat($_post_["chat_word"]);
 
 checkist\update_data_in_table::update_data_in_table("chatings", ["word" => $encoded_word, "date" => time_string::time_to_string(time()), "device" => $_post_["device"], "sent" => "1"], ["b_sender" => $_session_["b"], "q_sender" => $_session_["q"], "chat_key" => $chat_key]);
 
+notify\get\__latest_chat_preview::save_latest_chat_preview($_session_["q"],$_post_["qic"],$chat_key);
+
 new returner\final_returner_json(['success' => 'chat was sent successfull']);

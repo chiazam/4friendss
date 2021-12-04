@@ -53,7 +53,7 @@ class privacy_helper {
 
     public function handle_manipulator_privacy() {
 
-        if ($this->category === 'post' || $this->category === 'times') {
+        if (in_array($this->category,\gen_vars\gen_vars::$array_content)&&in_array($this->folk,\gen_vars\gen_vars::$privacy_list)) {
 
             return $this->post_handle_manipulator_privacy();
         } else {

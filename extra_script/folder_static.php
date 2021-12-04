@@ -13,8 +13,6 @@ new mysqli_conns\mysqli_connector(HOST, USERNAME, PASSWORD);
 
 new malware\mal_ware();
 
-use static_router as router;
-
 if (!check\if_get\check_isset_get::check_isset_get(["type"])) {
     new returner\final_returner_json(['permission' => 'denied due to insuffiecient credentials']);
 }

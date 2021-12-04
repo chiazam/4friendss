@@ -30,23 +30,7 @@
 
         if (url_info.hasOwnProperty('hash_array') && url_info.hash_array.hasOwnProperty('logged')) {
 
-            let loger_open = JSON.parse(funcs.decode_url(url_info.hash_array.logged));
-
-            let logged={};
-
-            if (loger_open.hasOwnProperty('login_token')&&loger_open.login_token.length>0) {
-
-                logged={logged_user:{}};
-
-                logged.logged_user = JSON.parse(funcs.base_64_decode(loger_open.login_token));
-
-                logged.from_asker = loger_open.from_asker;
-                
-            }else{
-
-                logged=false;
-
-            }
+            logged = funcs.decode_url(url_info.hash_array.logged);
 
         }
 
@@ -315,7 +299,7 @@
 
     funcs.loger_send_oauth = function () {
 
-        let user_info = { login_token: funcs.userinfo.login_token };
+        let user_info = funcs.userinfo;
 
         user_info.updated_login_token = true;
 

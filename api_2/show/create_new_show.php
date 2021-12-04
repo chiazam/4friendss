@@ -6,6 +6,7 @@ use check\if_post as check_post;
 use check\data_in_table as checkist;
 use time\time_to_string as time_string;
 use notify_add as notify;
+use hash_maker as hasher;
 
 require_once '../../classes/auto_loader_happener.php';
 
@@ -44,7 +45,7 @@ if (checkist\num_of_data_in_table::num_of_data_in_table("shows", "*", ["name_" =
     
 }
 
-$hash = md5(time_string::time_to_string(time()) . time_string::time_to_string(time()).md5($_post_["_name"]).md5($_post_["desc"]));
+$hash =hasher\hash_maker::post_times_hash_maker($_session_["b"],$_session_["g"]);
 
 checkist\add_data_in_table::add_data_in_table("shows",["name_" => $_post_["_name"], 'owner_b' => $_session_['b'], 'key_' => $hash,'create_date'=> time_string::time_to_string(time()), 'desc_'=>$_post_["desc"], 'cover'=>"icons/show_cover.jpeg","publish" => 0]);
 

@@ -15,4 +15,9 @@ if (empty(trim($_post_["privacy"]))) {
     new returner\final_returner_json(['mis_conduct' => 'empty', 'field' => 'privacy']);
 }
 
+if (!in_array($_post_['privacy'],gen_vars\gen_vars::$privacy_list)) {
+
+    new returner\final_returner_json(['mis_conduct' => 'wrong credentials', 'field' => 'privacy']);
+}
+
 new returner\final_returner_json(["success" => (new \privacy\privacy_helper($key_link, $post_typerrrrr, $_post_["privacy"], $_session_['q'], $_session_['g']))->handle_manipulator_privacy(), 'privacy' => $_post_["privacy"]]);
