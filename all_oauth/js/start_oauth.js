@@ -16,25 +16,41 @@
 
     };
 
-    if(funcs.is_trusted_asker()===false){
+    if (funcs.is_trusted_asker() === false) {
 
-        window.location.href=location.origin+location.pathname;
+        window.location.href = location.origin + location.pathname;
 
     }
 
     window.addEventListener('load', function () {
 
-            let logged=JSON.stringify({});
+        let logged = JSON.stringify({});
 
-            let url_info = lib.url_info_extractor(window.location);
+        let url_info = lib.url_info_extractor(window.location);
 
-            if(url_info.hasOwnProperty('hash_array')&&url_info.hash_array.hasOwnProperty('logged')){
+        if (url_info.hasOwnProperty('hash_array') && url_info.hash_array.hasOwnProperty('logged')) {
 
-                logged = funcs.decode_url(url_info.hash_array.logged);
+            let loger_open = JSON.parse(funcs.decode_url(url_info.hash_array.logged));
+
+            let logged={};
+
+            if (loger_open.hasOwnProperty('login_token')&&loger_open.login_token.length>0) {
+
+                logged={logged_user:{}};
+
+                logged.logged_user = JSON.parse(funcs.base_64_decode(loger_open.login_token));
+
+                logged.from_asker = loger_open.from_asker;
+                
+            }else{
+
+                logged=false;
 
             }
 
-            funcs.loger_start_oauth(logged);
+        }
+
+        funcs.loger_start_oauth(logged);
 
     }, 1);
 
@@ -66,15 +82,15 @@
     funcs.kick___offf___ = function () {
 
         funcs.start_all_template('main_body_hanger');
-        funcs.start_all_js_caller(); 
+        funcs.start_all_js_caller();
 
     };
 
-    funcs.intro_logger_display= function () {
-        
+    funcs.intro_logger_display = function () {
+
         let asker = funcs.is_trusted_asker();
 
-        if(domain===asker){
+        if (domain === asker) {
 
             return `<section class="height-60-px"></section>
 
@@ -91,7 +107,7 @@
             </section>
 `;
 
-        }else{
+        } else {
 
             return `<section class="height-60-px"></section>
 
@@ -104,7 +120,7 @@
             `;
 
         }
-        
+
     };
 
     funcs.start_all_template = function (element_id) {
@@ -227,7 +243,7 @@
 
             let login_starter_ = funcs.login_starter;
 
-            login_starter_.kick_off_login(); 
+            login_starter_.kick_off_login();
 
         }
 
@@ -274,34 +290,34 @@
 
         lib.add_class_ele('display-block', $('logger-boss-effiecient_2').parentNode.parentNode.parentNode);
     };
-    
+
 }());
 
 (function () {
 
-    funcs.logout_person=function (reload=false) {
+    funcs.logout_person = function (reload = false) {
 
         funcs.userinfo = {};
 
-        if (sessionStorage.getItem('login_info')!==null) {
+        if (sessionStorage.getItem('login_info') !== null) {
 
             sessionStorage.removeItem('login_info');
 
         }
 
-        if(reload===true){
+        if (reload === true) {
 
-            window.location.href=lib.url_remove_search_hash(window.location.href,true,false)
+            window.location.href = lib.url_remove_search_hash(window.location.href, true, false)
 
         }
-        
+
     };
 
     funcs.loger_send_oauth = function () {
 
-        let user_info = funcs.userinfo;
+        let user_info = { login_token: funcs.userinfo.login_token };
 
-        user_info.updated_login_token=true;
+        user_info.updated_login_token = true;
 
         let logged_in = JSON.stringify(user_info);
 
@@ -309,26 +325,26 @@
 
         let is_iframe_open = funcs.is_iframe();
 
-        if(is_iframe_open.is_frame===true||is_iframe_open.is_opened===true){
+        if (is_iframe_open.is_frame === true || is_iframe_open.is_opened === true) {
 
-            if(is_iframe_open.is_frame===true){
+            if (is_iframe_open.is_frame === true) {
 
-                lib.post_message(window.parent,{logged:logged_in},funcs.is_trusted_asker('origin'));
+                lib.post_message(window.parent, { logged: logged_in }, funcs.is_trusted_asker('origin'));
 
-            }else if(is_iframe_open.is_opened===true){
+            } else if (is_iframe_open.is_opened === true) {
 
-                lib.post_message(window.opener,{logged:logged_in},funcs.is_trusted_asker('origin'));
+                lib.post_message(window.opener, { logged: logged_in }, funcs.is_trusted_asker('origin'));
 
                 window.close();
 
             }
 
-        }else{
+        } else {
 
-            window.location.href=`${lib.url_remove_search_hash(funcs.is_trusted_asker(true),true,false)}#logged=${logged_in}`;
+            window.location.href = `${lib.url_remove_search_hash(funcs.is_trusted_asker(true), true, false)}#logged=${logged_in}`;
 
         }
 
     };
-    
+
 })();

@@ -32,15 +32,15 @@ if (!get_checker::check_isset_get(["key_viewer"])) {
 
 // ............ get show ...............
 
-if (checkist\num_of_data_in_table::num_of_data_in_table("shows","name_,owner_b,key_,create_date,desc_,cover,publish", ["key_" => $_GET["key_viewer"]]) > 0) {
+if (checkist\num_of_data_in_table::num_of_data_in_table("seasons","name_,show_,key_,create_date,desc_,cover,publish", ["key_" => $_GET["key_viewer"]]) > 0) {
 
-    \deleters\delete_except_remain\delete_all_except_remain::delete_all_keep_remain("shows", ["key_" => $_GET["key_viewer"]]);
+    \deleters\delete_except_remain\delete_all_except_remain::delete_all_keep_remain("seasons", ["key_" => $_GET["key_viewer"]]);
 
-    viewer\viewer_register::reg__viewer($_GET["key_viewer"], $_session_["q"], $_session_["b"], "show_viewed");
+    viewer\viewer_register::reg__viewer($_GET["key_viewer"], $_session_["q"], $_session_["b"], "season_viewed");
 
     notify_seer\notify_see::notif_see_all($_session_["g"], $_session_["q"], $_GET["key_viewer"]);
 
-    new returner\final_returner_json(['message' => show\finz\get_show_info::get_full_show_info($_GET["key_viewer"], $_session_["g"], $_session_["q"], true,false)]);
+    new returner\final_returner_json(['message' => show\finz\get_show_info::get_full_season_info($_GET["key_viewer"], $_session_["g"], $_session_["q"], true,false)]);
 
 } else {
 

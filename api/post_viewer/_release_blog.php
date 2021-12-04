@@ -55,7 +55,7 @@ if (!isset($blogs['none'])) {
 
         $chunker = $blogs[$i];
 
-        \deleters\delete_except_one\delete_all_except_one::delete_all_save_one('timeline', ["key_link" => $chunker["key_link"]]);
+        \deleters\delete_except_remain\delete_all_except_remain::delete_all_keep_remain('timeline', ["key_link" => $chunker["key_link"]]);
     }
 }
 
@@ -73,7 +73,7 @@ if (!isset($blogs['none'])) {
 
             $chunker = $blogs[$i];
 
-            \deleters\delete_except_one\delete_all_except_one::delete_all_save_one('timeline', ["key_link" => $chunker["key_link"]]);
+            \deleters\delete_except_remain\delete_all_except_remain::delete_all_keep_remain('timeline', ["key_link" => $chunker["key_link"]]);
         }
     }
 

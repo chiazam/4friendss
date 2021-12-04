@@ -45,7 +45,7 @@ if (checkist\num_of_data_in_table::num_of_data_in_table("timeline", "date,key_li
 
         $chunker = $list_time_line_needed[$i];
 
-        \deleters\delete_except_one\delete_all_except_one::delete_all_save_one('timeline', ["key_link" => $chunker["key_link"]]);
+        \deleters\delete_except_remain\delete_all_except_remain::delete_all_keep_remain('timeline', ["key_link" => $chunker["key_link"]]);
     }
 
     $post_born = timestream\post_get_streamer::help_imbitween($list_time_line_needed, $_session_["g"], $_session_["q"], $_session_["r"], false, "../../");

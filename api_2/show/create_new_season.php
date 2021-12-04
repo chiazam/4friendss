@@ -38,16 +38,22 @@ if (empty(trim($_post_["_name"]))) {
     new returner\final_returner_json(['mis_conduct' => 'empty', 'field' => 'desc']);
 }
 
-if (checkist\num_of_data_in_table::num_of_data_in_table("shows", "*", ["name_" => $_post_["_name"]]) > 0) {
+if (!checkist\num_of_data_in_table::num_of_data_in_table("shows", "*", ["key_" => $_post_["show"], "owner_b"=>$_session_['b']]) > 0) {
 
-    new returner\final_returner_json(['mis_conduct' => 'Show name already exists', 'field' => '']);
+    new returner\final_returner_json(['mis_conduct' => 'Show does not exist', 'field' => '']);
+    
+}
+
+if (checkist\num_of_data_in_table::num_of_data_in_table("seasons", "*", ["name_" => $_post_["_name"], 'show_'=>$_post_["show"]]) > 0) {
+
+    new returner\final_returner_json(['mis_conduct' => 'Season name already exists in this show', 'field' => '']);
     
 }
 
 $hash = md5(time_string::time_to_string(time()) . time_string::time_to_string(time()).md5($_post_["_name"]).md5($_post_["desc"]));
 
-checkist\add_data_in_table::add_data_in_table("shows",["name_" => $_post_["_name"], 'owner_b' => $_session_['b'], 'key_' => $hash,'create_date'=> time_string::time_to_string(time()), 'desc_'=>$_post_["desc"], 'cover'=>"icons/show_cover.jpeg","publish" => 0]);
+checkist\add_data_in_table::add_data_in_table("seasons",["name_" => $_post_["_name"], 'show_' => $_post_["show"], 'key_' => $hash,'create_date'=> time_string::time_to_string(time()), 'desc_'=>$_post_["desc"], 'cover'=>"icons/show_cover.jpeg","publish" => 0]);
 
-// notify\notification_maker::show_season_notifyer($hash,'shows',$_session_['g'],$_session_['q']);
+// notify\notification_maker::show_season_notifyer($hash,'seasons',$_session_['g'],$_session_['q']);
 
-new returner\final_returner_json(["success" => 'show created successfully']);
+new returner\final_returner_json(["success" => 'Season created successfully']);
