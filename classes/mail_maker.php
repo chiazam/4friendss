@@ -12,7 +12,7 @@ class mail_maker {
         $headers .= 'X-Mailer: PHP' . phpversion() . "\n";
         $headers .= 'MIME-Version: 1.0' . "\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        if (mail($to, $subject, "<b>please if this mail in spam, help us tag it not spam</b>" . $body, $headers, "-fTeam@4friendss.com")) {
+        if (mail($to, $subject, "<b>please if this mail is in spam, help us tag it not spam</b>" . $body, $headers, "-fTeam@4friendss.com")) {
 
             return true;
         } else {
@@ -30,7 +30,7 @@ class mail_maker {
         $headers .= 'MIME-Version: 1.0' . "\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-        if (mail($to, $subject, "<b>please if this mail in spam, help us tag it not spam</b>" . $body, $headers, "-f${$from}")) {
+        if (mail($to, $subject, "<b>please if this mail is in spam, help us tag it not spam</b>" . $body, $headers, "-f{$from}")) {
 
             return true;
         } else {

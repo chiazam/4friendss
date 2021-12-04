@@ -156,6 +156,31 @@ class main_all_search {
         }
     }
 
+    static public function season_search(string $word, string $g, string $q, int $offset = 0, int $limit = 5, $creata_b=null) {
+
+        $owner_b = $creata_b;
+
+        if($creata_b == null || empty(trim($creata_b))){
+
+            $owner_b = '';
+
+        }
+
+        $query__ = "SELECT seasons.name_,seasons.show_,seasons.key_,seasons.create_date,seasons.desc_,seasons.cover,seasons.publish FROM `" . DB . "`.`shows`,`" . DB . "`.`seasons` WHERE (seasons.name_ LIKE '%{$word}%' OR seasons.desc_ LIKE '%{$word}%') AND (shows.key_ = seasons.show_) AND (shows.owner_b LIKE '%{$owner_b}%') LIMIT {$limit} OFFSET {$offset}";
+
+        if (query__\sql_querier::num_rows($query__) > 0) {
+
+            $data = query__\sql_querier::fetch_assoc_loop($query__);
+
+            return \show\finz\get_show_info::bulk_season_info($data, $g, $q, true);
+
+        } else {
+
+            return ["none" => 1];
+            
+        }
+    }
+
     public static function finally_returner(string $word, string $type, string $g, string $q, string $finder_path, int $offset = 0, int $limit = 5,string $creata_b=null) {
 
         $dict = ['none' => true];
@@ -163,6 +188,7 @@ class main_all_search {
         $post = ['none' => true];
         $music = ['none' => true];
         $show = ['none' => true];
+        $season = ['none' => true];
 
         $owner_b = $creata_b;
 
@@ -211,7 +237,14 @@ class main_all_search {
 
         }
 
-        return ["dictionary" => $dict, "people" => $person, "music" => $music, "post" => $post, "show"=> $show];
+
+        if ($type == "show_all" || $type == "season") {
+
+            $season = self::season_search($word, $g, $q, $offset, $limit, $owner_b);
+
+        }
+
+        return ["dictionary" => $dict, "people" => $person, "music" => $music, "post" => $post, "show"=> $show,'season'=>$season];
     }
 
     // ...................empty................
@@ -330,6 +363,7 @@ class main_all_search {
         $post = ['none' => true];
         $music = ['none' => true];
         $show = ['none' => true];
+        $season = ['none' => true];
         
         $owner_b = $creata_b;
 
@@ -358,7 +392,7 @@ class main_all_search {
             $post = self::get_searched_post_hunter_($finder_path, $g, $q, $offset, $limit);
         }
 
-        return ["dictionary" => $dict, "people" => $person, "music" => $music, "post" => $post, "show"=> $show];
+        return ["dictionary" => $dict, "people" => $person, "music" => $music, "post" => $post, "show"=> $show,'season'=>$season];
     }
 
 }

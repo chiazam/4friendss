@@ -9,10 +9,13 @@ use prepare\trim as prep;
 use router\router_roll as route;
 use Sentiment\Analyzer as sentiment_analysis;
 use extract\mention_hashtag as hash_tag;
+use post_timeline_stream as timestream;
+use relate_and_how as relator;
 
-require_once(route::get_document_root().'/classes/sentiment/Analyzer.php');
+require_once(route::get_document_root() . '/classes/sentiment/Analyzer.php');
 
-class get_dialogue_chat {
+class get_dialogue_chat
+{
 
     protected $chatted_b;
     protected $chatted_q;
@@ -22,8 +25,11 @@ class get_dialogue_chat {
     protected $dir_dialog;
     protected $hunt_limit;
     protected $path_finder;
+    protected $is_group;
+    protected $chat_condition;
 
-    public function __construct(string $chatted_b, string $chatted_q, string $chatter_b, string $chatter_q, int $id_param, bool $dir_dialog, int $hunt_limit, string $path_finder) {
+    public function __construct(string $chatted_b, string $chatted_q, string $chatter_b, string $chatter_q, int $id_param, bool $dir_dialog, int $hunt_limit, string $path_finder)
+    {
         $this->chatted_b = prep\prepare_trim::return_prepare_trim($chatted_b);
         $this->chatted_q = prep\prepare_trim::return_prepare_trim($chatted_q);
         $this->chatter_q = prep\prepare_trim::return_prepare_trim($chatter_q);
@@ -32,20 +38,43 @@ class get_dialogue_chat {
         $this->dir_dialog = $dir_dialog;
         $this->hunt_limit = prep\prepare_trim::return_prepare_trim($hunt_limit);
         $this->path_finder = $path_finder;
+
+        $this->is_group = self::is_dialogue_group($this->chatted_b, $this->chatted_q);
+
+        if ($this->is_group === false) {
+
+            $this->chat_condition = "AND ((`" . DB . "`.`chatings`.`q_sender` = '{$this->chatter_q}' AND `" . DB . "`.`chatings`.`b_sender` = '{$this->chatter_b}' AND `" . DB . "`.`chat_recievers`.`q_reciever` = '{$this->chatted_q}' AND `" . DB . "`.`chat_recievers`.`b_reciever` = '{$this->chatted_b}') OR (`" . DB . "`.`chatings`.`q_sender` = '{$this->chatted_q}' AND `" . DB . "`.`chatings`.`b_sender` = '{$this->chatted_b}' AND `" . DB . "`.`chat_recievers`.`q_reciever` = '{$this->chatter_q}' AND `" . DB . "`.`chat_recievers`.`b_reciever` = '{$this->chatter_b}'))";
+        } elseif ($this->is_group === true) {
+
+            $this->chat_condition = "AND (`" . DB . "`.`chat_recievers`.`q_reciever` = '{$this->chatted_q}' AND `" . DB . "`.`chat_recievers`.`b_reciever` = '{$this->chatted_b}')";
+        }
     }
 
-    protected function get_negative_dialogue() {
+    static public function is_dialogue_group(string $chatted_b, string $chatted_q)
+    {
+
+        if (chichi\data_in_table\num_of_data_in_table::num_of_data_in_table('users', "*", ['b' => $chatted_b, "q" => $chatted_q]) > 0) {
+
+            return false;
+        } else {
+
+            return true;
+        }
+    }
+
+    protected function get_negative_dialogue()
+    {
 
         if ($this->id_param <= 1) {
 
             return ["none" => true];
         } else if ($this->id_param > 1) {
 
-            if (checkist\get_data_in_table::get_data_in_table('chatings', 'date', ['id' => $this->id_param]) > 0) {
+            if (checkist\get_data_in_table::get_data_in_table('chatings', 'date', ['id >' => $this->id_param]) > 0) {
 
                 $date_this_id = checkist\get_data_in_table::get_data_in_table('chatings', 'date', ['id' => $this->id_param, 'sent' => 1])['date'];
 
-                $query__ = "SELECT `" . DB . "`.`chatings`.`q_sender`, `" . DB . "`.`chatings`.`b_sender`, `" . DB . "`.`chatings`.`word`, `" . DB . "`.`chatings`.`date`, `" . DB . "`.`chatings`.`device`,`" . DB . "`.`chatings`.`id`,`" . DB . "`.`chatings`.`chat_key`,`" . DB . "`.`chat_recievers`.`b_reciever`,`" . DB . "`.`chat_recievers`.`q_reciever` FROM `" . DB . "`.`chatings`,`" . DB . "`.`chat_recievers` WHERE (`" . DB . "`.`chatings`.`chat_key` = `" . DB . "`.`chat_recievers`.`chat_key` AND `" . DB . "`.`chatings`.`sent` = '1' AND `" . DB . "`.`chatings`.`date` < '{$date_this_id}') AND ((`" . DB . "`.`chatings`.`q_sender` = '{$this->chatter_q}' AND `" . DB . "`.`chatings`.`b_sender` = '{$this->chatter_b}' AND `" . DB . "`.`chat_recievers`.`q_reciever` = '{$this->chatted_q}' AND `" . DB . "`.`chat_recievers`.`b_reciever` = '{$this->chatted_b}') OR (`" . DB . "`.`chatings`.`q_sender` = '{$this->chatted_q}' AND `" . DB . "`.`chatings`.`b_sender` = '{$this->chatted_b}' AND `" . DB . "`.`chat_recievers`.`q_reciever` = '{$this->chatter_q}' AND `" . DB . "`.`chat_recievers`.`b_reciever` = '{$this->chatter_b}')) ORDER BY `" . DB . "`.`chatings`.`date` DESC LIMIT {$this->hunt_limit}";
+                $query__ = "SELECT `" . DB . "`.`chatings`.`q_sender`, `" . DB . "`.`chatings`.`b_sender`, `" . DB . "`.`chatings`.`word`, `" . DB . "`.`chatings`.`date`, `" . DB . "`.`chatings`.`device`,`" . DB . "`.`chatings`.`id`,`" . DB . "`.`chatings`.`chat_key`,`" . DB . "`.`chat_recievers`.`b_reciever`,`" . DB . "`.`chat_recievers`.`q_reciever` FROM `" . DB . "`.`chatings`,`" . DB . "`.`chat_recievers` WHERE (`" . DB . "`.`chatings`.`chat_key` = `" . DB . "`.`chat_recievers`.`chat_key` AND `" . DB . "`.`chatings`.`sent` = '1' AND `" . DB . "`.`chatings`.`date` < '{$date_this_id}') {$this->chat_condition} ORDER BY `" . DB . "`.`chatings`.`date` DESC LIMIT {$this->hunt_limit}";
 
                 $num_table = \querier\sql_querier::num_rows($query__);
 
@@ -60,7 +89,7 @@ class get_dialogue_chat {
 
                         $element = $chat_list[$i];
 
-                        \deleters\delete_except_one\delete_all_except_one::delete_all_save_one('chatings', ["chat_key" => $element["chat_key"]]);
+                        \deleters\delete_except_remain\delete_all_except_remain::delete_all_keep_remain('chatings', ["chat_key" => $element["chat_key"]]);
                     }
 
                     return array_reverse($chat_list);
@@ -72,19 +101,20 @@ class get_dialogue_chat {
         }
     }
 
-    protected function get_postive_dialogue() {
+    protected function get_postive_dialogue()
+    {
 
         if ($this->id_param == 0) {
 
-            $query__ = "SELECT `" . DB . "`.`chatings`.`q_sender`, `" . DB . "`.`chatings`.`b_sender`, `" . DB . "`.`chatings`.`word`, `" . DB . "`.`chatings`.`date`, `" . DB . "`.`chatings`.`device`,`" . DB . "`.`chatings`.`id`,`" . DB . "`.`chatings`.`chat_key`,`" . DB . "`.`chat_recievers`.`b_reciever`,`" . DB . "`.`chat_recievers`.`q_reciever` FROM `" . DB . "`.`chatings`,`" . DB . "`.`chat_recievers` WHERE `" . DB . "`.`chatings`.`chat_key` = `" . DB . "`.`chat_recievers`.`chat_key` AND `" . DB . "`.`chatings`.`sent` = '1' AND ((`" . DB . "`.`chatings`.`q_sender` = '{$this->chatter_q}' AND `" . DB . "`.`chatings`.`b_sender` = '{$this->chatter_b}' AND `" . DB . "`.`chat_recievers`.`q_reciever` = '{$this->chatted_q}' AND `" . DB . "`.`chat_recievers`.`b_reciever` = '{$this->chatted_b}') OR (`" . DB . "`.`chatings`.`q_sender` = '{$this->chatted_q}' AND `" . DB . "`.`chatings`.`b_sender` = '{$this->chatted_b}' AND `" . DB . "`.`chat_recievers`.`q_reciever` = '{$this->chatter_q}' AND `" . DB . "`.`chat_recievers`.`b_reciever` = '{$this->chatter_b}')) ORDER BY `" . DB . "`.`chatings`.`date` DESC LIMIT {$this->hunt_limit}";
+            $query__ = "SELECT `" . DB . "`.`chatings`.`q_sender`, `" . DB . "`.`chatings`.`b_sender`, `" . DB . "`.`chatings`.`word`, `" . DB . "`.`chatings`.`date`, `" . DB . "`.`chatings`.`device`,`" . DB . "`.`chatings`.`id`,`" . DB . "`.`chatings`.`chat_key`,`" . DB . "`.`chat_recievers`.`b_reciever`,`" . DB . "`.`chat_recievers`.`q_reciever` FROM `" . DB . "`.`chatings`,`" . DB . "`.`chat_recievers` WHERE `" . DB . "`.`chatings`.`chat_key` = `" . DB . "`.`chat_recievers`.`chat_key` AND `" . DB . "`.`chatings`.`sent` = '1' {$this->chat_condition} ORDER BY `" . DB . "`.`chatings`.`date` DESC LIMIT {$this->hunt_limit}";
         } else if ($this->id_param > 0) {
 
 
-            if (checkist\get_data_in_table::get_data_in_table('chatings', 'date', ['id' => $this->id_param]) > 0) {
+            if (checkist\get_data_in_table::get_data_in_table('chatings', 'date', ['id >' => $this->id_param]) > 0) {
 
                 $date_this_id = checkist\get_data_in_table::get_data_in_table('chatings', 'date', ['id' => $this->id_param, 'sent' => 1])['date'];
 
-                $query__ = "SELECT `" . DB . "`.`chatings`.`q_sender`, `" . DB . "`.`chatings`.`b_sender`, `" . DB . "`.`chatings`.`word`, `" . DB . "`.`chatings`.`date`, `" . DB . "`.`chatings`.`device`,`" . DB . "`.`chatings`.`id`,`" . DB . "`.`chatings`.`chat_key`,`" . DB . "`.`chat_recievers`.`b_reciever`,`" . DB . "`.`chat_recievers`.`q_reciever` FROM `" . DB . "`.`chatings`,`" . DB . "`.`chat_recievers` WHERE `" . DB . "`.`chatings`.`chat_key` = `" . DB . "`.`chat_recievers`.`chat_key` AND `" . DB . "`.`chatings`.`sent` = '1' AND `" . DB . "`.`chatings`.`date` > '{$date_this_id}' AND ((`" . DB . "`.`chatings`.`q_sender` = '{$this->chatter_q}' AND `" . DB . "`.`chatings`.`b_sender` = '{$this->chatter_b}' AND `" . DB . "`.`chat_recievers`.`q_reciever` = '{$this->chatted_q}' AND `" . DB . "`.`chat_recievers`.`b_reciever` = '{$this->chatted_b}') OR (`" . DB . "`.`chatings`.`q_sender` = '{$this->chatted_q}' AND `" . DB . "`.`chatings`.`b_sender` = '{$this->chatted_b}' AND `" . DB . "`.`chat_recievers`.`q_reciever` = '{$this->chatter_q}' AND `" . DB . "`.`chat_recievers`.`b_reciever` = '{$this->chatter_b}')) ORDER BY `" . DB . "`.`chatings`.`date` DESC LIMIT {$this->hunt_limit}";
+                $query__ = "SELECT `" . DB . "`.`chatings`.`q_sender`, `" . DB . "`.`chatings`.`b_sender`, `" . DB . "`.`chatings`.`word`, `" . DB . "`.`chatings`.`date`, `" . DB . "`.`chatings`.`device`,`" . DB . "`.`chatings`.`id`,`" . DB . "`.`chatings`.`chat_key`,`" . DB . "`.`chat_recievers`.`b_reciever`,`" . DB . "`.`chat_recievers`.`q_reciever` FROM `" . DB . "`.`chatings`,`" . DB . "`.`chat_recievers` WHERE `" . DB . "`.`chatings`.`chat_key` = `" . DB . "`.`chat_recievers`.`chat_key` AND `" . DB . "`.`chatings`.`sent` = '1' AND `" . DB . "`.`chatings`.`date` > '{$date_this_id}' {$this->chat_condition} ORDER BY `" . DB . "`.`chatings`.`date` DESC LIMIT {$this->hunt_limit}";
             } else {
 
                 return ["none" => true];
@@ -104,14 +134,15 @@ class get_dialogue_chat {
 
                 $element = $chat_list[$i];
 
-                \deleters\delete_except_one\delete_all_except_one::delete_all_save_one('chatings', ["chat_key" => $element["chat_key"]]);
+                \deleters\delete_except_remain\delete_all_except_remain::delete_all_keep_remain('chatings', ["chat_key" => $element["chat_key"]]);
             }
 
             return $chat_list;
         }
     }
 
-    public function final_retter_chat_array() {
+    public function final_retter_chat_array()
+    {
         if ($this->dir_dialog === true) {
 
             $chat_list = $this->get_postive_dialogue();
@@ -119,18 +150,18 @@ class get_dialogue_chat {
 
             $chat_list = $this->get_negative_dialogue();
         } else {
-            throw new \Exception("false parameters no access", 9000);
+            return ["none" => true];
         }
 
         if (!isset($chat_list["none"])) {
 
             for ($i = 0; $i < count($chat_list); $i++) {
 
-                $word_chatt= chat_manipulator\chat_encoder_decoder::decodeChat($chat_list[$i]["word"]);
+                $word_chatt = chat_manipulator\chat_encoder_decoder::decodeChat($chat_list[$i]["word"]);
 
-                $chat_list[$i]["hash_tags"] = hash_tag\extract_hashtag_mention::array_mention_hashtags($word_chatt,true);
+                $chat_list[$i]["hash_tags"] = hash_tag\extract_hashtag_mention::array_mention_hashtags($word_chatt, true);
 
-                $chat_list[$i]["mentions"] = hash_tag\extract_hashtag_mention::array_mention_hashtags($word_chatt,false);
+                $chat_list[$i]["mentions"] = hash_tag\extract_hashtag_mention::array_mention_hashtags($word_chatt, false);
 
                 $chat_list[$i]["word"] = htmlspecialchars(\sensor\word\word_sensor::friends_rude_sensor($word_chatt));
 
@@ -146,6 +177,17 @@ class get_dialogue_chat {
 
                 $audios = checkist\num_of_data_in_table::num_of_data_in_table("chatings_file", "*", ["chat_key" => $chat_list[$i]['chat_key'], "chat_file_type" => "audio/mpeg"]);
 
+                if ($this->is_group === true && ($chat_list[$i]['q_sender'] != $this->chatter_q && $chat_list[$i]['b_sender'] != $this->chatter_b)) {
+
+                    $data_sender = checkist\get_data_in_table::get_data_in_table("users", "*", ["q" => $chat_list[$i]['q_sender'], "b" => $chat_list[$i]['b_sender']]);
+
+                    $data_me = checkist\get_data_in_table::get_data_in_table("users", "*", ["q" => $this->chatter_q, "b" => $this->chatter_b]);
+
+                    $chat_list[$i]['sender'] =  timestream\post_get_streamer::post_get_poster_people_infor(["g" => $data_sender["g"], "r" => $data_sender["r"]]);
+
+                    $chat_list[$i]['sender']["relationship"] = relator\relate_detect_how::relate_picker($data_sender["g"], $data_sender["q"], $data_me["g"], $data_me["q"]);
+                }
+
                 $chat_list[$i]["files_num"] = [];
                 $chat_list[$i]["files_num"]["images"] = $images;
                 $chat_list[$i]["files_num"]["audios"] = $audios;
@@ -153,9 +195,6 @@ class get_dialogue_chat {
             }
         }
 
-
-
         return (array_reverse($chat_list));
     }
-
 }

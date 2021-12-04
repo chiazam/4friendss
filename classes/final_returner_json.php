@@ -23,8 +23,8 @@ class final_returner_json {
             'request_domain' => $_request_domain,
             'logged_in' => $_login_info,
             'exec_time' => (microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"]),
-            'request_uri' => get_server_uri(),          
-            'form_field' => get_post_get_field(),
+            // 'request_uri' => get_server_uri(),          
+            // 'form_field' => get_post_get_field(),
             // 'req_info' =>['get'=>$_GET,'post'=>$_post_]
         ];
 

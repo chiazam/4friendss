@@ -2,6 +2,7 @@
 
 namespace privacy;
 
+use check as checkist;
 /**
  * Description of privacy_validator
  *
@@ -42,7 +43,7 @@ class privacy_validator {
             return true;
         } else {
 
-            if ((checkers\get_data_in_table::get_data_in_table("users", "gender", ["g" => $this->me_g, "q" => $this->me_q])['gender']) === $privacy_folk) {
+            if ((checkist\data_in_table\get_data_in_table::get_data_in_table("users", "gender", ["g" => $this->me_g, "q" => $this->me_q])['gender']) === $privacy_folk) {
 
                 return true;
             } else {

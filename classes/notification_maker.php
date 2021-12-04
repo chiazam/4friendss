@@ -12,19 +12,24 @@ class notification_maker
     static public function post_notifyer(string $key)
     {
 
-        $data_post =  checkist\get_data_in_table::get_data_in_table("timeline", "*", ["key_link" => $key]);
+        if (checkist\num_of_data_in_table::num_of_data_in_table("timeline", "*", ["key_link" => $key])>0) {
 
-        checkist\add_data_in_table::add_data_in_table("notify", ["notifyer_q"  => $data_post["poster_q"], "notifyer_g" => $data_post["poster_g"], "key_holder" => $key, "date" => \time\time_to_string::time_to_string(time()), "category" => $data_post["category"]]);
+            $data_post =  checkist\get_data_in_table::get_data_in_table("timeline", "*", ["key_link" => $key]);
+
+            checkist\add_data_in_table::add_data_in_table("notify", ["notifyer_q"  => $data_post["poster_q"], "notifyer_g" => $data_post["poster_g"], "key_holder" => $key, "date" => \time\time_to_string::time_to_string(time()), "category" => $data_post["category"]]);
+           
+        }
+
     }
 
-    static public function show_notifyer(string $key)
+    static public function show_season_notifyer(string $key, string $type,string $g, string $q)
     {
 
-        $owner_b =  checkist\get_data_in_table::get_data_in_table("shows", "owner_b", ["key_" => $key])['owner_b'];
+        if (checkist\num_of_data_in_table::num_of_data_in_table($type, "*", ["key_" => $key])>0) {
 
-        $owner =  checkist\get_data_in_table::get_data_in_table("users", "q,g", ["b" => $owner_b]);
+            checkist\add_data_in_table::add_data_in_table("notify", ["notifyer_q"  => $q, "notifyer_g" => $g, "key_holder" => $key, "date" => \time\time_to_string::time_to_string(time()), "category" => $type]);
 
-        checkist\add_data_in_table::add_data_in_table("notify", ["notifyer_q"  => $owner["q"], "notifyer_g" => $owner["g"], "key_holder" => $key, "date" => \time\time_to_string::time_to_string(time()), "category" => "shows"]);
+        }
         
     }
 
